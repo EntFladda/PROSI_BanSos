@@ -26,7 +26,7 @@
                 -moz-user-select: none;
                 -ms-user-select: none;
                 user-select: none;
-                background-color: #007bff;
+                background-color: #101C2C;
                 border: 1px solid transparent;
                 padding: .575rem 18.75rem;
                 font-size: 1rem;
