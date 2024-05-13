@@ -23,7 +23,7 @@
         </li>-->
 
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-            <a href="{{ url('/level') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
+            <a href="{{ url('/') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>DASHBOARD</p>
             </a>
@@ -42,14 +42,40 @@
           </a>
         </li>
         
-        <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
+        <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
           <a href="{{ url('/kategori') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
-            <i class="nav-icon far fa-bookmark"></i>
-            <p>LAPORAN</p>
+              <i class="nav-icon far fa-bookmark"></i>
+              <p>LAPORAN</p>
+              <span class="fas fa-caret-down" style="position:absolute; top:50%; right:20px; transform:translateY(-50%); transition:transform 0.4s"></span>
+              <ul class="submenu-pengajuan" hidden style="background-color: #1b3b40; border-radius:10px; margin:5px">
+                  <li class="nav-item">
+                      <a href="{{ url('/kategori') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
+                          <i class="nav-icon far fa-bookmark"></i>
+                          <p>PENGAJUAN</p>
+                      </a>
+                  </li>
+              </ul>
+              <ul class="submenu-penerimaan" hidden style="background-color: #1b3b40; border-radius:10px; margin:5px">
+                  <li class="nav-item">
+                      <a href="{{ url('/kategori') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
+                          <i class="nav-icon far fa-bookmark"></i>
+                          <p>PENERIMAAN</p>
+                      </a>
+                  </li>
+              </ul>
           </a>
-        </li>
-        
+      </li>
+      
         
       </ul>
     </nav>
+
   </div>
+  <script>
+    // JavaScript for dropdown menu functionality
+    const laporanLink = document.querySelector('.sidebar .nav-item a[p="LAPORAN"]');
+    const laporanSubMenu = document.querySelector('.sidebar .nav-item ul');
+
+    laporanLink.addEventListener('click', () => {laporanSubMenu.classList.toggle('hidden');
+    });
+  </script>
