@@ -2,6 +2,14 @@
 
 return [
 
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Pengguna::class,
+        ],
+    ],
+    
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
