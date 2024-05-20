@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\RTController;
 use App\Http\Controllers\WelcomeController;
 
@@ -19,10 +21,13 @@ use App\Http\Controllers\WelcomeController;
 Route::get('/', [WelcomeController::class,'index']);
 
 // RT
-
 Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
 
+// Masyarakat
+Route::get('/dashboardrm', [MasyarakatController::class,'dashboardm']);
 
+// Kelurahan
+Route::get('/dashboardrm', [KelurahanController::class,'dashboardm']);
 // Show login form
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
