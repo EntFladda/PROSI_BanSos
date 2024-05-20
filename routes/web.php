@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\RTController;
 use App\Http\Controllers\WelcomeController;
 
 /*
@@ -14,8 +15,13 @@ use App\Http\Controllers\WelcomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// Dashboard RW
 Route::get('/', [WelcomeController::class,'index']);
+
+// RT
+
+Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
+
 
 // Show login form
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
