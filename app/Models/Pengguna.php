@@ -13,15 +13,14 @@ class Pengguna extends Authenticatable
     protected $primaryKey = 'id_pengguna';
 
     protected $fillable = [
-        'Email', 'Username', 'Password', 'Name', 'role'
+        'Email', 'Username', 'Password', 'Name', 'role',
     ];
 
     protected $hidden = [
         'Password', 'remember_token',
     ];
 
-    public function getAuthPassword()
-    {
-        return $this->Password;
-    }
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }

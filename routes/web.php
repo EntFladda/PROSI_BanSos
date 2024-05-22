@@ -28,12 +28,12 @@ Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
 Route::get('/dashboardrm', [MasyarakatController::class,'dashboardm']);
 
 // Kelurahan
-Route::get('/dashboardrm', [KelurahanController::class,'dashboardm']);
+Route::get('/dashboardm', [KelurahanController::class,'dashboardm']);
 // Show login form
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
-Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('register', [RegisterController::class, 'register']);
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
+
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');

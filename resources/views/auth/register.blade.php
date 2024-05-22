@@ -15,26 +15,32 @@
                 display: flex;
                 justify-content: space-around;
             }
-            .button {
+            .button{
                 display: inline-block;
-                width: 110%;
+                width: 100%;
                 font-weight: 400;
                 color: #ffffff;
                 text-align: center;
                 vertical-align: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
                 user-select: none;
-                background-color: #101C2C;
+                background-color: #000000;
                 border: 1px solid transparent;
                 padding: .575rem 18.75rem;
                 font-size: 1rem;
                 line-height: 1.5;
                 border-radius: .55rem;
+                margin-top: 0.3rem;
                 transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
             }
-            .form {
+
+            .form{
                 display: block;
-                width: 110%;
-                padding: 1.5rem 15rem;
+                width: 100%;
+                height: calc(1.5em + .75rem + 2px);
+                padding: 1.5rem 1rem;
                 font-size: 1rem;
                 font-weight: 400;
                 line-height: 1.5;
@@ -47,8 +53,8 @@
             }
             .form-select {
                 display: block;
-                width: 110%;
-                padding: 1.5rem 15rem;
+                width: 100%;
+                padding: 1.5rem 1rem;
                 font-size: 1rem;
                 font-weight: 400;
                 line-height: 1.5;
