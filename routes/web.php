@@ -21,8 +21,6 @@ use App\Http\Controllers\Auth\RegisterController;
 // Dashboard RW
 Route::get('/', [WelcomeController::class,'index']);
 
-<<<<<<< HEAD
-=======
 // RT
 Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
 
@@ -32,7 +30,6 @@ Route::get('/dashboardrm', [MasyarakatController::class,'dashboardm']);
 // Kelurahan
 Route::get('/dashboardrm', [KelurahanController::class,'dashboardm']);
 // Show login form
->>>>>>> 339c6d7f146a1d8b0c4e71939c6a962a9f3284c9
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
