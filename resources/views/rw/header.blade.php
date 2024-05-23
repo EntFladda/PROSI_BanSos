@@ -8,7 +8,8 @@
         <a href="../../index3.html" class="nav-link">Home</a>
       </li>-->
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link" style="font-weight: bold;color:black">SI BANSOS RW</a>
+        <a href="#" class="nav-link" style="font-weight: bold;color:black;font-size:20px;display: flex;
+        justify-content: space-between;align-items: center;">SI BANSOS RW</a>
       </li>
     </ul>
 
