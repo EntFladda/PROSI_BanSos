@@ -23,6 +23,6 @@ class RTController extends Controller
 
         $activeMenu = 'dashboardrt';
 
-        return view('welcome', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('rt.dashboardrt', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }

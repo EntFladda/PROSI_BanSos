@@ -23,6 +23,6 @@ class KelurahanController extends Controller
 
         $activeMenu = 'dashboardk';
 
-        return view('welcome', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('kelurahan.dashboardk', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }

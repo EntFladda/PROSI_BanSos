@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('rw.template')
 
 @section('content')
 

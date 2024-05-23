@@ -27,7 +27,7 @@
   <!-- Site wrapper -->
   <div class="wrapper">
     <!-- Navbar -->
-    @include('layout.header')
+    @include('rw.header')
     <!-- Navbar -->
 
     <!-- Main Sidebar Container -->
@@ -39,14 +39,14 @@
       </a>
 
       <!-- Sidebar -->
-      @include('layout.sidebar')
+      @include('rw.sidebar')
       <!-- Sidebar -->
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      @include('layout.breadcrumb')
+      @include('rw.breadcrumb')
 
       <!-- Main content -->
       <section class="content">
@@ -56,7 +56,7 @@
     </div>
     <!-- Content Wrapper. Contains page content -->
 
-    @include('layout.footer')
+    @include('rw.footer')
   </div>
   <!-- Site wrapper -->
 

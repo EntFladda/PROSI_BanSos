@@ -19,7 +19,7 @@ use App\Http\Controllers\WelcomeController;
 |
 */
 // RW
-Route::get('/dashboardrw', [RWController::class,'index']);
+Route::get('/dashboardrw', [RWController::class,'dashboardrw']);
 
 // RT
 Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
@@ -29,6 +29,7 @@ Route::get('/dashboardm', [MasyarakatController::class,'dashboardm']);
 
 // Kelurahan
 Route::get('/dashboardk', [KelurahanController::class,'dashboardk']);
+
 // Show login form
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
