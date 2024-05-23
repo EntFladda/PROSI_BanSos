@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-class MasyarakatController extends Controller
+class RWController extends Controller
 {
     public function index()
     {
@@ -10,18 +10,18 @@ class MasyarakatController extends Controller
             'list' => ['Home', 'Welcome']
         ];
 
-        $activeMenu = 'dashboardm';
+        $activeMenu = 'dashboardrw';
 
         return view('welcome', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
-    public function dashboardm()
+    public function dashboardrw()
     {
         $breadcrumb = (object) [
             'title' => 'Selamat Datang',
             'list' => ['Home', 'Welcome']
         ];
 
-        $activeMenu = 'dashboardm';
+        $activeMenu = 'dashboardrw';
 
         return view('welcome', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }

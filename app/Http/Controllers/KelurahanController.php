@@ -10,18 +10,18 @@ class KelurahanController extends Controller
             'list' => ['Home', 'Welcome']
         ];
 
-        $activeMenu = 'dashboardm';
+        $activeMenu = 'dashboardk';
 
         return view('welcome', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
-    public function dashboardm()
+    public function dashboardk()
     {
         $breadcrumb = (object) [
             'title' => 'Selamat Datang',
             'list' => ['Home', 'Welcome']
         ];
 
-        $activeMenu = 'dashboardrm';
+        $activeMenu = 'dashboardk';
 
         return view('welcome', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }

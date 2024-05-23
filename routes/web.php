@@ -5,6 +5,7 @@ use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\RTController;
+use App\Http\Controllers\RWController;
 use App\Http\Controllers\WelcomeController;
 
 /*
@@ -17,17 +18,17 @@ use App\Http\Controllers\WelcomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// Dashboard RW
-Route::get('/', [WelcomeController::class,'index']);
+// RW
+Route::get('/dashboardrw', [RWController::class,'index']);
 
 // RT
 Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
 
 // Masyarakat
-Route::get('/dashboardrm', [MasyarakatController::class,'dashboardm']);
+Route::get('/dashboardm', [MasyarakatController::class,'dashboardm']);
 
 // Kelurahan
-Route::get('/dashboardrm', [KelurahanController::class,'dashboardm']);
+Route::get('/dashboardk', [KelurahanController::class,'dashboardk']);
 // Show login form
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 

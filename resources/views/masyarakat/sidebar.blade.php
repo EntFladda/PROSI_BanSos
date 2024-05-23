@@ -17,7 +17,7 @@
      
 
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-            <a href="{{ url('/dashboardrt') }}" class="nav-link {{ ($activeMenu == 'dashboardrt')? 'active' : '' }} ">
+            <a href="{{ url('/dashboardm') }}" class="nav-link {{ ($activeMenu == 'dashboardm')? 'active' : '' }} ">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>DASHBOARD</p>
             </a>
