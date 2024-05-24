@@ -1,0 +1,1 @@
+@extends('kelurahan.template')

@@ -1,7 +1,7 @@
 @extends('masyarakat.template')
 
 @section('content')
-<h1 style="font-size:30px;font-weight:bold;text-align:center;">PENGAJUAN BANTUAN SOSIAL</h1>
+<h1 style="font-size:30px;font-weight:bold;text-align:center;">FORM PENGAJUAN BANTUAN SOSIAL</h1>
 <style>
     table {
         width: 100%;

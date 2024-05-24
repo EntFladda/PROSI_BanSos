@@ -23,6 +23,7 @@ Route::get('/dashboardrw', [RWController::class,'dashboardrw']);
 Route::get('/datapengajuan', [RWController::class,'datapengajuan']);
 Route::get('/laporanpengajuanrw', [RWController::class,'laporanpengajuanrw']);
 Route::get('/laporanpenerimaanrw', [RWController::class,'laporanpenerimaanrw']);
+Route::get('/validasi', [RWController::class,'validasi']);
 
 // RT
 Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
@@ -41,6 +42,7 @@ Route::get('/dashboardk', [KelurahanController::class,'dashboardk']);
 Route::get('/informasik', [KelurahanController::class,'informasik']);
 Route::get('/laporanpenerimaank', [KelurahanController::class,'laporanpenerimaank']);
 Route::get('/pengajuank', [KelurahanController::class,'pengajuank']);
+Route::get('/validasik', [KelurahanController::class,'validasik']);
 
 // Show login form
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
