@@ -1,84 +1,138 @@
 @extends('masyarakat.template')
 
 @section('content')
-<h1 style="font-size:30px;font-weight:bold;text-align:center;">FORM PENGAJUAN BANTUAN SOSIAL</h1>
+
 <style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
+    
 
-    table, th, td {
-        border: 1px solid #bdc3c7;
-    }
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
 
-    th, td {
-        padding: 12px;
-        text-align: left;
-    }
 
-    th {
-        background-color: #1b3b40;
-        color: white;
-    }
+button.back {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
 
-    td {
-        background-color: white;
-        color: #34495e;
-    }
+button.submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    .btn {
-        background-color: #1b3b40;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
-    }
+.form-group {
+    margin-bottom: 15px;
+}
 
-    .btn i {
-        margin-right: 5px;
-    }
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
 </style>
 <div class="card">
     <div class="card-header">
-
+        <h1 style="font-size:30px;font-weight:bold;text-align:center;">FORM PENGAJUAN BANTUAN SOSIAL</h1>
         <div class="card-tools"></div>
     </div>
     <div class="card-body">
-        <table style="width: 100%;border-collapse: collapse;margin-top: 20px;border: 1px solid #bdc3c7;">
-            <tr>
-                <th style="text-align: center;">No</th>
-                <th style="text-align: center;">Aksi</th>
-                <th style="text-align: center;">JENIS BANSOS</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td><a href="#" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
-                <td style="font-weight: bold">Bantuan Pangan Non Tunai (BPNT)</td>
-                <td><a href="#" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><a href="#" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
-                <td style="font-weight: bold">Program Keluarga Harapan (PKH)</td>
-                <td><a href="#" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><a href="#" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
-                <td style="font-weight: bold">Bantuan Langsung Tunai</td>
-                <td><a href="#" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><a href="#" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
-                <td style="font-weight: bold">Bantuan Sosial Beras</td>
-                <td><a href="#" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
-            </tr>
-        </table>
+        <section>
+            <button class="back">Kembali</button>
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="no_kartu_keluarga">NO Kartu Keluarga</label>
+                    <input type="text" id="no_kartu_keluarga" name="no_kartu_keluarga" required>
+                </div>
+                <div class="form-group">
+                    <label for="no_telepon">NO Telepon</label>
+                    <input type="text" id="no_telepon" name="no_telepon" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama_lengkap">Nama Lengkap</label>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+                </div>
+                <div class="form-group">
+                    <label for="pekerjaan">Pekerjaan Sesuai KTP</label>
+                    <input type="text" id="pekerjaan" name="pekerjaan" required>
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi_kondisi">Deskripsi Singkat Tentang Kondisi Ekonomi Anda</label>
+                    <textarea id="deskripsi_kondisi" name="deskripsi_kondisi" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="jumlah_tanggungan">Jumlah Tanggungan</label>
+                    <select id="jumlah_tanggungan" name="jumlah_tanggungan" required>
+                        <option value="">Pilih Opsi</option>
+                        <!-- Add options here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="penghasilan">Penghasilan</label>
+                    <select id="penghasilan" name="penghasilan" required>
+                        <option value="">Pilih Opsi</option>
+                        <!-- Add options here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bansos_sebelumnya">Apakah Pernah menerima Bansos Sebelumnya</label>
+                    <select id="bansos_sebelumnya" name="bansos_sebelumnya" required>
+                        <option value="">Pilih Opsi</option>
+                        <!-- Add options here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="jenis_bansos">Jenis Bansos yang ingin diajukan</label>
+                    <select id="jenis_bansos" name="jenis_bansos" required>
+                        <option value="">Pilih Opsi</option>
+                        <!-- Add options here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="keterangan_tidak_mampu">Surat Keterangan Tidak Mampu</label>
+                    <input type="file" id="keterangan_tidak_mampu" name="keterangan_tidak_mampu" required>
+                </div>
+                <div class="form-group">
+                    <label for="foto_depan">Foto Rumah Tampak Depan</label>
+                    <input type="file" id="foto_depan" name="foto_depan" required>
+                </div>
+                <div class="form-group">
+                    <label for="foto_ruang_tamu">Foto Rumah Ruang Tamu</label>
+                    <input type="file" id="foto_ruang_tamu" name="foto_ruang_tamu" required>
+                </div>
+                <div class="form-group">
+                    <label for="foto_dapur">Foto Rumah Tampak Dapur</label>
+                    <input type="file" id="foto_dapur" name="foto_dapur" required>
+                </div>
+                <button type="submit" class="submit">Simpan</button>
+            </form>
+        </section>
     </div>
 </div>
 @endsection

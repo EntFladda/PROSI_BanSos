@@ -56,4 +56,14 @@ class RTController extends Controller
 
         return view('rt.laporanpenerimaan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    public function pengajuanrt(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'pengajuanrt';
+
+        return view('rt.pengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }

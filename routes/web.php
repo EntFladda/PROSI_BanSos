@@ -27,7 +27,7 @@ Route::get('/validasi', [RWController::class,'validasi']);
 
 // RT
 Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
-Route::get('/pengajuan', [RTController::class,'pengajuan']);
+Route::get('/pengajuanrt', [RTController::class,'pengajuanrt']);
 Route::get('/laporanpengajuan', [RTController::class,'laporanpengajuan']);
 Route::get('/laporanpenerimaan', [RTController::class,'laporanpenerimaan']);
 
