@@ -25,4 +25,35 @@ class RWController extends Controller
 
         return view('rw.dashboardrw', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    
+    public function datapengajuan(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'datapengajuan';
+
+        return view('rw.datapengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function laporanpengajuanrw(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'laporanpengajuanrw';
+
+        return view('rw.laporanpengajuanrw', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function laporanpenerimaanrw(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'laporanpenerimaanrw';
+
+        return view('rw.laporanpenerimaanrw', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }

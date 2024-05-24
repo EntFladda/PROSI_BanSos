@@ -20,15 +20,25 @@ use App\Http\Controllers\WelcomeController;
 */
 // RW
 Route::get('/dashboardrw', [RWController::class,'dashboardrw']);
+Route::get('/datapengajuan', [RWController::class,'datapengajuan']);
+Route::get('/laporanpengajuanrw', [RWController::class,'laporanpengajuanrw']);
+Route::get('/laporanpenerimaanrw', [RWController::class,'laporanpenerimaanrw']);
 
 // RT
 Route::get('/dashboardrt', [RTController::class,'dashboardrt']);
+Route::get('/pengajuan', [RTController::class,'pengajuan']);
+Route::get('/laporanpengajuan', [RTController::class,'laporanpengajuan']);
+Route::get('/laporanpenerimaan', [RTController::class,'laporanpenerimaan']);
 
 // Masyarakat
 Route::get('/dashboardm', [MasyarakatController::class,'dashboardm']);
+Route::get('/informasi', [MasyarakatController::class,'informasi']);
+Route::get('/konfirmasi', [MasyarakatController::class,'konfirmasi']);
 
 // Kelurahan
 Route::get('/dashboardk', [KelurahanController::class,'dashboardk']);
+Route::get('/informasik', [KelurahanController::class,'informasik']);
+Route::get('/laporanpenerimaank', [KelurahanController::class,'laporanpenerimaank']);
 
 // Show login form
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

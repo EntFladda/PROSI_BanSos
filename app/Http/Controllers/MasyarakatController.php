@@ -25,4 +25,24 @@ class MasyarakatController extends Controller
 
         return view('masyarakat.dashboardm', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    public function informasi(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'informasi';
+
+        return view('masyarakat.informasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function konfirmasi(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'konfirmasi';
+
+        return view('masyarakat.konfirmasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }

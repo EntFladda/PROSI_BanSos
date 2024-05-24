@@ -1,14 +1,7 @@
 <div class="sidebar"style="background-color: #d6d0d0">
     <!-- SidebarSearch Form -->
     <div class="form-inline mt-2">
-      <div class="input-group" data-widget="sidebar-search">
-        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-sidebar">
-            <i class="fas fa-search fa-fw"></i>
-          </button>
-        </div>
-      </div>
+     
     </div>
     <!-- Sidebar Menu -->
     <nav class="mt-2">
@@ -24,7 +17,7 @@
           </li>
         
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-          <a href="{{ url('/level') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
+          <a href="{{ url('/informasik') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
             <i class="nav-icon fas fa-layer-group"></i>
             <p>INFORMASI</p>
           </a>
@@ -38,7 +31,7 @@
         </li>
         
         <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
-          <a href="{{ url('/kategori') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
+          <a href="{{ url('/laporanpenerimaank') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
               <i class="nav-icon far fa-bookmark"></i>
               <p>LAPORAN PENERIMAAN</p>
           </a>
