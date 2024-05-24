@@ -1,4 +1,4 @@
-@extends('layout.template')
+php@extends('layout.template')
 
 @section('content')
     <div class="card card-outline card-primary">
@@ -21,7 +21,7 @@
                 <div class="form-group row">
                     <label class="col-1 control-label col-form-label">Nama Kategori</label>
                     <div class="col-11">
-                        <input type="text" class="form-control" id="kategori_nama" name="kategori_nama" 
+                        <input type="text" class="form-control" id="kategori_nama" name="kategori_nama"
                             value="{{ old('kategori_nama') }}" required>
                         @error('kategori_nama')
                             <small class="form-text text-danger">{{ $message }}</small>
@@ -38,8 +38,8 @@
             </form>
         </div>
     </div>
-@endsection 
+@endsection
 @push('css')
-@endpush 
+@endpush
 @push('js')
 @endpush

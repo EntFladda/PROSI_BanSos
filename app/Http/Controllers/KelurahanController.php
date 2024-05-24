@@ -47,4 +47,14 @@ class KelurahanController extends Controller
 
         return view('kelurahan.laporanpenerimaank', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    public function pengajuank(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'pengajuank';
+
+        return view('kelurahan.pengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }

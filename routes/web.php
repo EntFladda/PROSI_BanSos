@@ -34,11 +34,13 @@ Route::get('/laporanpenerimaan', [RTController::class,'laporanpenerimaan']);
 Route::get('/dashboardm', [MasyarakatController::class,'dashboardm']);
 Route::get('/informasi', [MasyarakatController::class,'informasi']);
 Route::get('/konfirmasi', [MasyarakatController::class,'konfirmasi']);
+Route::get('/pengajuanm', [MasyarakatController::class,'pengajuanm']);
 
 // Kelurahan
 Route::get('/dashboardk', [KelurahanController::class,'dashboardk']);
 Route::get('/informasik', [KelurahanController::class,'informasik']);
 Route::get('/laporanpenerimaank', [KelurahanController::class,'laporanpenerimaank']);
+Route::get('/pengajuank', [KelurahanController::class,'pengajuank']);
 
 // Show login form
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
