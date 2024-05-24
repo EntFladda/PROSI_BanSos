@@ -1,4 +1,5 @@
 <div class="sidebar"style="background-color: #d6d0d0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- SidebarSearch Form -->
     <div class="form-inline mt-2">
       
@@ -11,7 +12,7 @@
 
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
             <a href="{{ url('/dashboardrt') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <i class="nav-icon fas fa-home"></i>
               <p>DASHBOARD</p>
             </a>
           </li>
@@ -31,7 +32,7 @@
       </li>
       <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
         <a href="{{ url('/laporanpenerimaan') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
-            <i class="nav-icon far fa-user"></i>
+            <i class="nav-icon fas fa-book-open"></i>
             <p>LAPORAN PENERIMAAN</p>
         </a>
     </li>
