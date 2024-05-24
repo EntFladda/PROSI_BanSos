@@ -47,14 +47,4 @@ class KelurahanController extends Controller
 
         return view('kelurahan.laporanpenerimaank', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
-    public function validasik(){
-        $breadcrumb = (object) [
-            'title' => '',
-            'list' => ['Home', 'Welcome']
-        ];
-
-        $activeMenu = 'validasik';
-
-        return view('kelurahan.validasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
-    }
 }
