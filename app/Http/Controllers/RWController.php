@@ -25,7 +25,7 @@ class RWController extends Controller
 
         return view('rw.dashboardrw', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
-    
+
     public function datapengajuan(){
         $breadcrumb = (object) [
             'title' => '',
@@ -55,5 +55,15 @@ class RWController extends Controller
         $activeMenu = 'laporanpenerimaanrw';
 
         return view('rw.laporanpenerimaanrw', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function validasi(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'validasi';
+
+        return view('rw.validasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }
