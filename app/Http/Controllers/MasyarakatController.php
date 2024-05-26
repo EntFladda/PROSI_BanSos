@@ -22,7 +22,6 @@ class MasyarakatController extends Controller
         ];
 
         $activeMenu = 'dashboardm';
-
         return view('masyarakat.dashboardm', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function informasi(){

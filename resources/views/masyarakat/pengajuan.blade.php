@@ -67,12 +67,12 @@ form {
             <button class="back">Kembali</button>
             <form action="/submit" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="no_kartu_keluarga">NO Kartu Keluarga</label>
-                    <input type="text" id="no_kartu_keluarga" name="no_kartu_keluarga" required>
+                    <label for="no_kartu_keluarga">No. Kartu Keluarga</label>
+                    <input type="number" id="no_kartu_keluarga" name="no_kartu_keluarga" required>
                 </div>
                 <div class="form-group">
-                    <label for="no_telepon">NO Telepon</label>
-                    <input type="text" id="no_telepon" name="no_telepon" required>
+                    <label for="no_telepon">No. Telepon</label>
+                    <input type="number" id="no_telepon" name="no_telepon" required>
                 </div>
                 <div class="form-group">
                     <label for="nama_lengkap">Nama Lengkap</label>
@@ -90,7 +90,7 @@ form {
                     <label for="jumlah_tanggungan">Jumlah Tanggungan</label>
                     <select id="jumlah_tanggungan" name="jumlah_tanggungan" required>
                         <option value="">Pilih Opsi</option>
-                        <!-- Add options here -->
+                        
                     </select>
                 </div>
                 <div class="form-group">
