@@ -35,12 +35,12 @@
         .register-button {
             display: inline-block;
             width: 100%;
-            font-weight: 400;
-            color: #ffffff;
+            font-weight: 700;
+            color: #000000;
             text-align: center;
             vertical-align: middle;
             user-select: none;
-            background-color: #2889a7;
+            background-color: #4dceeb;
             border: 1px solid transparent;
             padding: .575rem 1.75rem;
             font-size: 1rem;
@@ -71,7 +71,7 @@
             <div class="col-md-6 logo-container"></div>
             <div class="col-md-6 d-flex align-items-center">
                 <div class="mx-auto">
-                    <h2 class="login">Login</h2>
+                    <h2 class="login">Log In</h2>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="mb-3">
@@ -90,8 +90,8 @@
                             <input type="checkbox" class="form-check-input" id="remember" name="remember">
                             <label class="form-check-label" for="remember">Remember me</label>
                         </div>
-                        <a href="{{ route('register') }}" class="register-button" style="text-decoration: none; color:#ffffff;">Register</a>
-                        <button type="submit" class="button">Submit</button>
+                        <button type="submit" class="register-button">Submit</button>
+                        <a href="{{ route('register') }}" class="button" style="text-decoration: none; color:#ffffff;">Register</a>
                     </form>
                 </div>
             </div>
