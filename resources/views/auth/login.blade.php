@@ -1,107 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sosio Link</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <style>
-            /* CSS untuk membuat logo memenuhi sisi kiri */
-            .logo-container {
-                background-image: url('images/login.png'); /* Ganti path/to/your/logo.jpg dengan path logo Anda */
-                background-size: cover;
-                height: 100vh; /* Mengatur tinggi logo agar memenuhi tinggi layar */
-            }
-            .login{
-                display: flex;
-                justify-content: space-around;
-            }
-            .button{
-                display: inline-block;
-                width: 100%;
-                font-weight: 400;
-                color: #ffffff;
-                text-align: center;
-                vertical-align: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-                background-color: #000000;
-                border: 1px solid transparent;
-                padding: .575rem 18.75rem;
-                font-size: 1rem;
-                line-height: 1.5;
-                border-radius: .55rem;
-                margin-top: 0.3rem;
-                transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-            }
-            .register-button {
-                display: inline-block;
-                width: 100%; /* Adjusted width to fit within form */
-                font-weight: 400;
-                color: #ffffff;
-                text-align: center;
-                vertical-align: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-                background-color: #2889a7; /* Green color for the register button */
-                border: 1px solid transparent;
-                padding: .575rem 1.75rem; /* Adjusted padding */
-                font-size: 1rem;
-                line-height: 1.5;
-                border-radius: .55rem;
-                transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-            }
-            .form{
-                display: block;
-                width: 100%;
-                height: calc(1.5em + .75rem + 2px);
-                padding: 1.5rem 1rem;
-                font-size: 1rem;
-                font-weight: 400;
-                line-height: 1.5;
-                color: #000000;
-                background-color: #ffffff;
-                background-clip: padding-box;
-                border: 1px solid #101C2C;
-                border-radius: .75rem;
-                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-            }
-            </style>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sosio Link - Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .logo-container {
+            background-image: url('images/login.png');
+            background-size: cover;
+            height: 100vh;
+        }
+        .login {
+            display: flex;
+            justify-content: space-around;
+        }
+        .button {
+            display: inline-block;
+            width: 100%;
+            font-weight: 400;
+            color: #ffffff;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            background-color: #000000;
+            border: 1px solid transparent;
+            padding: .575rem 18.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .55rem;
+            margin-top: 0.3rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+        .register-button {
+            display: inline-block;
+            width: 100%;
+            font-weight: 400;
+            color: #ffffff;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            background-color: #2889a7;
+            border: 1px solid transparent;
+            padding: .575rem 1.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .55rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+        .form {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: 1.5rem 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #000000;
+            background-color: #ffffff;
+            background-clip: padding-box;
+            border: 1px solid #101C2C;
+            border-radius: .75rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+    </style>
+</head>
+<body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Bagian Logo -->
-            <div class="col-md-6 logo-container">
-                <!-- Tidak ada konten di sini karena logo akan diatur melalui CSS -->
-            </div>
-            
-            <!-- Bagian Form Login -->
+            <div class="col-md-6 logo-container"></div>
             <div class="col-md-6 d-flex align-items-center">
                 <div class="mx-auto">
                     <h2 class="login">Login</h2>
-                    <form>
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="mb-3">
-                          <input type="Username" class="form" id="exampleInputEmail1" placeholder="Username">
+                            <input type="text" name="username" class="form" placeholder="Username" required>
+                            @error('username')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-3">
-                          <input type="password" class="form" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" name="password" class="form" placeholder="Password" required>
+                            @error('password')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                            <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                            <label class="form-check-label" for="remember">Remember me</label>
                         </div>
                         <a href="{{ route('register') }}" class="register-button" style="text-decoration: none; color:#ffffff;">Register</a>
                         <button type="submit" class="button">Submit</button>
-                      </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
-    

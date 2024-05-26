@@ -3,46 +3,50 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Pengguna;
 
 class LoginController extends Controller
 {
-    public function login(Request $request)
-    {
-        $credentials = $request->only('Username', 'Password');
-
-        if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            $user = Auth::user();
-
-            switch ($user->role) {
-                case 1:
-                    return redirect()->route('admin.dashboard');
-                case 2:
-                    return redirect()->route('masyarakat.dashboard');
-                case 3:
-                    return redirect()->route('rt.dashboard');
-                case 4:
-                    return redirect()->route('rw.dashboard');
-                case 5:
-                    return redirect()->route('kelurahan.dashboard');
-                default:
-                    return redirect('/home');
-            }
-        } else {
-            return redirect()->back()->withErrors(['Username or Password is incorrect.']);
-        }
-    }
-
     public function showLoginForm()
     {
         return view('auth.login');
     }
 
-    public function logout(Request $request)
+    public function login(LoginRequest $request)
+    {
+        $credentials = $request->only('username', 'password');
+        
+        $user = Pengguna::where('Username', $credentials['username'])->first();
+        
+        if ($user && Hash::check($credentials['password'], $user->Password)) {
+            Auth::login($user);
+            
+            // Redirect based on user role
+            switch ($user->role) {
+                case 1:
+                    return redirect()->route('admin.dashboard');
+                case 2:
+                    return redirect()->route('dashboardm');
+                case 3:
+                    return redirect()->route('dashboardrt');
+                case 4:
+                    return redirect()->route('dashboardrw');
+                case 5:
+                    return redirect()->route('dashboardk');
+            }
+        }
+
+        return back()->withErrors([
+            'username' => 'The provided credentials do not match our records.',
+        ]);
+    }
+
+    public function logout()
     {
         Auth::logout();
-        return redirect('/login');
+        return redirect()->route('login');
     }
 }

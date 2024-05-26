@@ -4,23 +4,29 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class Pengguna extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
 
     protected $table = 'pengguna';
+    protected $primaryKey = 'id_pengguna';
 
     protected $fillable = [
-        'name',
-        'email',
-        'username',
+        'Name',
+        'Email',
+        'Username',
+        'Password',
         'role',
-        'password',
     ];
 
     protected $hidden = [
-        'password',
+        'Password',
+        'remember_token',
     ];
+
+    public function getAuthPassword()
+    {
+        return $this->Password;
+    }
 }
