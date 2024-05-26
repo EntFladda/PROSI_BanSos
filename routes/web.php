@@ -6,7 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\RTController;
 use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\PenggunaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +33,9 @@ Route::get('/dashboardm', [KelurahanController::class,'dashboardm']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
+
+Route::get('/register', [PenggunaController::class, 'showRegisterForm'])->name('register.form');
+Route::post('/register', [PenggunaController::class, 'register'])->name('register');
+
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');

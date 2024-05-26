@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        $credentials = $request->only('Email', 'Password');
+        $credentials = $request->only('Username', 'Password');
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
@@ -31,7 +31,7 @@ class LoginController extends Controller
                     return redirect('/home');
             }
         } else {
-            return redirect()->back()->withErrors(['Email or Password is incorrect.']);
+            return redirect()->back()->withErrors(['Username or Password is incorrect.']);
         }
     }
 

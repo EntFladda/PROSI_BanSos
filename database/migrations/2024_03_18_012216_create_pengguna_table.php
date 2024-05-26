@@ -10,11 +10,11 @@ class CreatePenggunaTable extends Migration
     {
         Schema::create('pengguna', function (Blueprint $table) {
             $table->increments('id_pengguna');
-            $table->string('Email');
-            $table->string('Username', 150);
-            $table->string('Password', 150);
             $table->string('Name', 250);
-            $table->tinyInteger('role');
+            $table->string('Email')->unique();
+            $table->string('Username', 150)->unique();
+            $table->integer('role');
+            $table->string('Password', 250);
             $table->timestamps();
         });
     }
