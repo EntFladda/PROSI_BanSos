@@ -1,14 +1,8 @@
 <div class="sidebar"style="background-color: #d6d0d0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- SidebarSearch Form -->
     <div class="form-inline mt-2">
-      <div class="input-group" data-widget="sidebar-search">
-        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-sidebar">
-            <i class="fas fa-search fa-fw"></i>
-          </button>
-        </div>
-      </div>
+      
     </div>
     <!-- Sidebar Menu -->
     <nav class="mt-2">
@@ -17,43 +11,31 @@
      
 
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-            <a href="{{ url('/dashboardrt') }}" class="nav-link {{ ($activeMenu == 'dashboardrt')? 'active' : '' }} ">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="{{ url('/dashboardrt') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
+                <i class="nav-icon fas fa-home"></i>
               <p>DASHBOARD</p>
             </a>
           </li>
         
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-          <a href="{{ url('/level') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
+          <a href="{{ url('/pengajuanrt') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
             <i class="nav-icon fas fa-layer-group"></i>
             <p>PENGAJUAN</p>
           </a>
         </li>
         
         <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
-          <a href="{{ url('/kategori') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
+          <a href="{{ url('/laporanpengajuan') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
               <i class="nav-icon far fa-bookmark"></i>
-              <p>LAPORAN</p>
-              <span class="fas fa-caret-down" style="position:absolute; top:50%; right:20px; transform:translateY(-50%); transition:transform 0.4s"></span>
-              <ul class="submenu-pengajuan" hidden style="background-color: #1b3b40; border-radius:10px; margin:5px">
-                  <li class="nav-item">
-                      <a href="{{ url('/kategori') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
-                          <i class="nav-icon far fa-bookmark"></i>
-                          <p>PENGAJUAN</p>
-                      </a>
-                  </li>
-              </ul>
-              <ul class="submenu-penerimaan" hidden style="background-color: #1b3b40; border-radius:10px; margin:5px">
-                  <li class="nav-item">
-                      <a href="{{ url('/kategori') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
-                          <i class="nav-icon far fa-bookmark"></i>
-                          <p>PENERIMAAN</p>
-                      </a>
-                  </li>
-              </ul>
+              <p>LAPORAN PENGAJUAN</p>
           </a>
       </li>
-      
+      <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
+        <a href="{{ url('/laporanpenerimaan') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
+            <i class="nav-icon fas fa-book-open"></i>
+            <p>LAPORAN PENERIMAAN</p>
+        </a>
+    </li>
         
       </ul>
     </nav>
