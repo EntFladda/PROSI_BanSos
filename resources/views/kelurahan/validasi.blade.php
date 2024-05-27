@@ -1,7 +1,7 @@
 @extends('kelurahan.template')
 
 @section('content')
-    
+
     <style>
         table {
             width: 100%;
@@ -112,38 +112,38 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="#" class="btn-detail">Detail</a>
-                            <a href="#" class="btn-delete">Delete</a>
+                        <td><a href="/detail" class="btn-detail">Detail</a>
+                            <a href="/delete" class="btn-delete">Delete</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
-                        <td><a href="#" class="btn-success">Disetujui</a>
-                            <a href="#" class="btn-delete">Ditolak</a>
+                        <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
+                            <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
                         </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="#" class="btn-detail">Detail</a>
-                            <a href="#" class="btn-delete">Delete</a>
+                        <td><a href="/detail" class="btn-detail">Detail</a>
+                            <a href="/delete" class="btn-delete">Delete</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
-                        <td><a href="#" class="btn-success">Disetujui</a>
-                            <a href="#" class="btn-delete">Ditolak</a>
+                        <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
+                            <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
                         </td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="#" class="btn-detail">Detail</a>
-                            <a href="#" class="btn-delete">Delete</a>
+                        <td><a href="/detail" class="btn-detail">Detail</a>
+                            <a href="/delete" class="btn-delete">Delete</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
-                        <td><a href="#" class="btn-success">Disetujui</a>
-                            <a href="#" class="btn-delete">Ditolak</a>
+                        <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
+                            <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
                         </td>
                     </tr>
                 </table>
@@ -164,7 +164,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail">Lihat</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
@@ -172,7 +172,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail">Lihat</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
@@ -180,7 +180,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail">Lihat</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>
@@ -204,7 +204,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail">Lihat</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
@@ -215,7 +215,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail">Lihat</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
@@ -225,7 +225,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail">Lihat</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>
