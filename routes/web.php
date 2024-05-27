@@ -27,7 +27,9 @@ Route::get('/pengajuanm', [MasyarakatController::class,'pengajuanm']);
 // RT
 Route::get('/pengajuanrt', [RTController::class,'pengajuanrt']);
 Route::get('/laporanpengajuan', [RTController::class,'laporanpengajuan']);
+Route::get('/laporanpengajuan/detail/{id}', [RTController::class,'laporanpengajuandetail']);
 Route::get('/laporanpenerimaan', [RTController::class,'laporanpenerimaan']);
+Route::get('/laporanpenerimaan/detail/{id}', [RTController::class,'laporanpenerimaandetail']);
 
 // RW
 Route::get('/datapengajuan', [RWController::class,'datapengajuan']);
