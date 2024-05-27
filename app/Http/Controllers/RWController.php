@@ -30,7 +30,7 @@ class RWController extends Controller
     public function datapengajuan(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Pengajuan', 'Welcome']
         ];
 
         $activeMenu = 'datapengajuan';
@@ -40,7 +40,7 @@ class RWController extends Controller
     public function laporanpengajuanrw(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Laporan Pengajuan', 'Welcome']
         ];
 
         $activeMenu = 'laporanpengajuanrw';
@@ -50,7 +50,7 @@ class RWController extends Controller
     public function laporanpenerimaanrw(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Laporan Penerimaan', 'Welcome']
         ];
 
         $activeMenu = 'laporanpenerimaanrw';
@@ -60,7 +60,7 @@ class RWController extends Controller
     public function validasi(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Validasi', 'Welcome']
         ];
 
         $activeMenu = 'validasi';
@@ -71,7 +71,7 @@ class RWController extends Controller
     {
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Detail Pengajuan', 'Welcome']
         ];
 
         $activeMenu = 'datapengajuan';
@@ -82,7 +82,7 @@ class RWController extends Controller
     {
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Detail Validasi', 'Welcome']
         ];
 
         $activeMenu = 'validasidetail';
@@ -103,7 +103,7 @@ class RWController extends Controller
     public function laporanpengajuanrwdetail(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Detail Laporan Pengajuan', 'Welcome']
         ];
 
         $activeMenu = 'laporanpengajuanrwdetail';
@@ -113,7 +113,7 @@ class RWController extends Controller
     public function laporanpenerimaanrwdetail(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Detail Laporan Penerimaan', 'Welcome']
         ];
 
         $activeMenu = 'laporanpenerimaanrwdetail';

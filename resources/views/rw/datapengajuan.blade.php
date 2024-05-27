@@ -125,7 +125,7 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><a href="{{ url('/datapengajuan/detail/1') }}" class="btn-detail">Detail</a></td>
+                    <td><a href="{{ url('/datapengajuan/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     <td>Lisa</td>
                     <td>0100100001001010</td>
                     <td>Petani</td>
@@ -133,7 +133,7 @@
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><a href="{{ url('/datapengajuan/detail/2') }}" class="btn-detail">Detail</a></td>
+                    <td><a href="{{ url('/datapengajuan/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     <td>Rose</td>
                     <td>0100100001001010</td>
                     <td>Wiraswasta</td>
@@ -141,7 +141,7 @@
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail">Detail</a></td>
+                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     <td>Jisoo</td>
                     <td>0100100001001010</td>
                     <td>Ibu Rumah Tangga</td>
