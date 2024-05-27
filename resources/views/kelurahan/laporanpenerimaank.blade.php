@@ -47,7 +47,7 @@
   text-decoration: none;
   border-radius: 5px;
     }
-    
+
 
     .table-controls {
   display: flex;
@@ -113,10 +113,10 @@
               <option value="50">50</option>
               <option value="100">100</option>
             </select>entries
-          
+
             <input type="text" id="search-input" placeholder="Search...">
           </div>
-          
+
         <table class="data-table">
             <thead>
               <tr>
@@ -131,27 +131,27 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td><a href="#" class="btn-detail">Detail</a></td>
+                <td><a href="/detail_laporan_penerimaan" class="btn-detail">Detail</a></td>
                 <td>Lisa</td>
                 <td>0100100001001010</td>
                 <td>BLT</td>
-                <td><a href="#" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
               </tr>
               <tr>
                 <td>2</td>
-                <td><a href="#" class="btn-detail">Detail</a></td>
+                <td><a href="/detail_laporan_penerimaan" class="btn-detail">Detail</a></td>
                 <td>Rose</td>
                 <td>0100100001001010</td>
                 <td>PKH</td>
-                <td><a href="#" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
               </tr>
               <tr>
                 <td>3</td>
-                <td><a href="#" class="btn-detail">Detail</a></td>
+                <td><a href="/detail_laporan_penerimaan" class="btn-detail">Detail</a></td>
                 <td>Jisoo</td>
                 <td>0100100001001010</td>
                 <td>BPNT</td>
-                <td><a href="#" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
               </tr>
             </tbody>
           </table>

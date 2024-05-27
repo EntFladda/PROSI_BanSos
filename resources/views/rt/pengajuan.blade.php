@@ -3,7 +3,7 @@
 @section('content')
 
 <style>
-    
+
 
 .container {
     background: #fff;
