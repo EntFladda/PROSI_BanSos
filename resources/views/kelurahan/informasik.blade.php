@@ -97,33 +97,33 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td><a href="/detail_informasi_kelurahan" class="btn-detail">Detail</a>
-                        <a href="/edit_informasi_kelurahan" class="btn-edit">Edit</a>
-                        <a href="/delete_informasi_kelurahan" class="btn-delete">Delete</a>
+                    <td><a href="{{ url('/informasik/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
+                        <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
+                        <a href="/delete_informasi_kelurahan" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
                     </td>
                     <td>Bantuan Pangan Non Tunai (BPNT)</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><a href="/detail_informasi_kelurahan" class="btn-detail">Detail</a>
-                        <a href="/edit_informasi_kelurahan" class="btn-edit">Edit</a>
-                        <a href="/delete_informasi_kelurahan" class="btn-delete">Delete</a>
+                    <td><a href="{{ url('/informasik/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
+                        <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
+                        <a href="/delete_informasi_kelurahan" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
                     </td>
                     <td>Program Keluarga Harapan (PKH)</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><a href="/detail_informasi_kelurahan" class="btn-detail">Detail</a>
-                        <a href="/edit_informasi_kelurahan" class="btn-edit">Edit</a>
-                        <a href="/delete_informasi_kelurahan" class="btn-delete">Delete</a>
+                    <td><a href="{{ url('/informasik/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
+                        <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
+                        <a href="/delete_informasi_kelurahan" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
                     </td>
                     <td>Bantuan Langsung Tunai</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td><a href="/detail_informasi_kelurahan" class="btn-detail">Detail</a>
-                        <a href="/edit_informasi_kelurahan" class="btn-edit">Edit</a>
-                        <a href="/delete_informasi_kelurahan" class="btn-delete">Delete</a>
+                    <td><a href="{{ url('/informasik/detail/4') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
+                        <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
+                        <a href="/delete_informasi_kelurahan" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
                     </td>
                     <td>Bantuan Sosial Beras</td>
                 </tr>

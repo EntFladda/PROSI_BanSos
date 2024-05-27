@@ -57,4 +57,36 @@ class KelurahanController extends Controller
 
         return view('kelurahan.validasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    public function informasikdetail()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'informasikdetail';
+
+        return view('informasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function laporanpenerimaankdetail()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'laporanpenerimaankdetail';
+
+        return view('laporanpenerimaank.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function validasikdetail(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'validasikdetail';
+
+        return view('validasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }

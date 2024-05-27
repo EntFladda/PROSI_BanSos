@@ -136,7 +136,7 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td><a href="/detail_laporan_penerimaan" class="btn-detail">Detail</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Lisa</td>
                         <td>0100100001001010</td>
                         <td>BLT</td>
@@ -144,7 +144,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="/detail_laporan_penerimaan" class="btn-detail">Detail</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Rose</td>
                         <td>0100100001001010</td>
                         <td>PKH</td>
@@ -152,7 +152,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="/detail_laporan_penerimaan" class="btn-detail">Detail</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Jisoo</td>
                         <td>0100100001001010</td>
                         <td>BPNT</td>

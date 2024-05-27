@@ -112,8 +112,8 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="/detail" class="btn-detail">Detail</a>
-                            <a href="/delete" class="btn-delete">Delete</a>
+                        <td><a href="{{ url('/validasik/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/1') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
@@ -124,8 +124,8 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="/detail" class="btn-detail">Detail</a>
-                            <a href="/delete" class="btn-delete">Delete</a>
+                        <td><a href="{{ url('/validasik/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/2') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
@@ -136,8 +136,8 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="/detail" class="btn-detail">Detail</a>
-                            <a href="/delete" class="btn-delete">Delete</a>
+                        <td><a href="{{ url('/validasik/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/3') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>
@@ -164,7 +164,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
@@ -172,7 +172,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
@@ -180,7 +180,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>
@@ -204,7 +204,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
@@ -215,7 +215,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
@@ -225,7 +225,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>

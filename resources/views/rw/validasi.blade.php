@@ -1,7 +1,7 @@
 @extends('rw.template')
 
 @section('content')
-    
+
     <style>
         table {
             width: 100%;
@@ -112,38 +112,38 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="{{ url('/validasi/detail/1') }}" class="btn-detail">Detail</a>
-                            <a href="{{ url('/validasi/delete/1') }}" class="btn-delete">Delete</a>
+                        <td><a href="{{ url('/validasi/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/1') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
-                        <td><a href="#" class="btn-success">Disetujui</a>
-                            <a href="#" class="btn-delete">Ditolak</a>
+                        <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
+                            <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
                         </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="{{ url('/validasi/detail/2') }}" class="btn-detail">Detail</a>
-                            <a href="{{ url('/validasi/delete/2') }}" class="btn-delete">Delete</a>
+                        <td><a href="{{ url('/validasi/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/2') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
-                        <td><a href="#" class="btn-success">Disetujui</a>
-                            <a href="#" class="btn-delete">Ditolak</a>
+                        <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
+                            <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
                         </td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="{{ url('/validasi/detail/3') }}" class="btn-detail">Detail</a>
-                            <a href="{{ url('/validasi/delete/3') }}" class="btn-delete">Delete</a>
+                        <td><a href="{{ url('/validasi/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/3') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
-                        <td><a href="#" class="btn-success">Disetujui</a>
-                            <a href="#" class="btn-delete">Ditolak</a>
+                        <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
+                            <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
                         </td>
                     </tr>
                 </table>
@@ -164,7 +164,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
@@ -172,7 +172,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
@@ -180,7 +180,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>
@@ -204,7 +204,7 @@
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Lisa</td>
                         <td>000900</td>
@@ -215,7 +215,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Rose</td>
                         <td>000900</td>
@@ -225,7 +225,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="#" class="btn-detail">Lihat</a>
+                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                         <td>Jiso</td>
                         <td>000900</td>
@@ -237,23 +237,4 @@
                 </table>
             </div>
         </div>
-        $('.btn-delete').on('click', function() {
-            if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
-                var id = $(this).data('id');
-                $.ajax({
-                    url: '/penerimas/' + id,
-                    type: 'DELETE',
-                    data: {
-                        _token: '{{ csrf_token() }}'
-                    },
-                    success: function(response) {
-                        alert('Data berhasil dihapus');
-                        location.reload();
-                    },
-                    error: function(xhr) {
-                        console.log(xhr.responseText);
-                    }
-                });
-            }
-        });
     @endsection

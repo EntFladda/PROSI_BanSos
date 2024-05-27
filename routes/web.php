@@ -46,8 +46,11 @@ Route::delete('/validasi/delete/{id}', [RWController::class,'delete']);
 
 // Kelurahan
 Route::get('/informasik', [KelurahanController::class,'informasik']);
+Route::get('/informasik/detail/{id}', [KelurahanController::class,'informasikdetail']);
 Route::get('/laporanpenerimaank', [KelurahanController::class,'laporanpenerimaank']);
+Route::get('/laporanpenerimaank/detail/{id}', [KelurahanController::class,'laporanpenerimaankdetail']);
 Route::get('/validasik', [KelurahanController::class,'validasik']);
+Route::get('/validasik/detail/{id}', [KelurahanController::class,'validasikdetail']);
 
 //Show Login Form
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
