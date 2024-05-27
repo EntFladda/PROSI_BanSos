@@ -44,7 +44,7 @@
         }
 
         .btn-detail {
-            background-color: #07db2e;
+            background-color: #1b3b40;
             color: #fff;
             padding: 5px 10px;
             text-decoration: none;
@@ -76,7 +76,7 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td><a href="/detail" class="btn-detail">Detail</a></td>
+                    <td><a href="{{ url('/konfirmasi/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"> Detail </a></i></td>
                     <td>Rose</td>
                     <td>911</td>
                     <td>BLT</td>

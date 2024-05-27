@@ -21,7 +21,9 @@ use App\Http\Controllers\WelcomeController;
 */
 // Masyarakat
 Route::get('/informasi', [MasyarakatController::class,'informasi']);
+Route::get('/informasi/detail/{id}', [MasyarakatController::class,'informasidetail']);
 Route::get('/konfirmasi', [MasyarakatController::class,'konfirmasi']);
+Route::get('/konfirmasi/detail/{id}', [MasyarakatController::class,'konfirmasidetail']);
 Route::get('/pengajuanm', [MasyarakatController::class,'pengajuanm']);
 
 // RT
