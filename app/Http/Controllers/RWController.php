@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Models\Entry;
 
 class RWController extends Controller
 {
@@ -66,4 +67,16 @@ class RWController extends Controller
 
         return view('rw.validasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    public function datapengajuandetail($id)
+{
+    $entry = Entry::findOrFail($id); // Fetch the entry by ID
+    
+    // Define the page data
+    $page = (object) [
+        'title' => 'Detail Pengajuan Bansos'
+    ];
+
+    return view('datapengajuan.show', ['page' => $page, 'entry' => $entry]); // Pass the 'page' and 'entry' variables to the view
+}
+
 }

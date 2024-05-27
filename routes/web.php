@@ -31,6 +31,7 @@ Route::get('/laporanpenerimaan', [RTController::class,'laporanpenerimaan']);
 
 // RW
 Route::get('/datapengajuan', [RWController::class,'datapengajuan']);
+Route::get('/datapengajuan/detail/{id}', [RWController::class,'datapengajuandetail']);
 Route::get('/laporanpengajuanrw', [RWController::class,'laporanpengajuanrw']);
 Route::get('/laporanpenerimaanrw', [RWController::class,'laporanpenerimaanrw']);
 Route::get('/validasi', [RWController::class,'validasi']);
