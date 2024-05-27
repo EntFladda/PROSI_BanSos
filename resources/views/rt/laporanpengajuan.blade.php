@@ -1,7 +1,7 @@
 @extends('rt.template')
 
 @section('content')
-<h1 style="font-size:30px;font-weight:bold;text-align:center;">LIHAT LAPORAN PENGAJUAN</h1>
+
 <style>
   table {
         width: 100%;
@@ -94,7 +94,7 @@
 </style>
 <div class="card">
     <div class="card-header">
-        
+      <h1 style="font-size:30px;font-weight:bold;text-align:center;">LIHAT LAPORAN PENGAJUAN</h1>
         <div class="card-tools"></div>
     </div>
     <div class="card-body">

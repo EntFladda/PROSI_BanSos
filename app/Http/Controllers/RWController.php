@@ -67,16 +67,57 @@ class RWController extends Controller
 
         return view('rw.validasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
-    public function datapengajuandetail($id)
-{
-    $entry = Entry::findOrFail($id); // Fetch the entry by ID
-    
-    // Define the page data
-    $page = (object) [
-        'title' => 'Detail Pengajuan Bansos'
-    ];
+    public function datapengajuandetail()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
 
-    return view('datapengajuan.show', ['page' => $page, 'entry' => $entry]); // Pass the 'page' and 'entry' variables to the view
-}
+        $activeMenu = 'datapengajuan';
 
+        return view('datapengajuan.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function validasidetail()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'validasidetail';
+
+        return view('validasi.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function delete()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'delete';
+
+        return view('rw.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function laporanpengajuanrwdetail(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'laporanpengajuanrwdetail';
+
+        return view('laporanpengajuanrw.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function laporanpenerimaanrwdetail(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Home', 'Welcome']
+        ];
+
+        $activeMenu = 'laporanpenerimaanrwdetail';
+
+        return view('laporanpenerimaanrw.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }

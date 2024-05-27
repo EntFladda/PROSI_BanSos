@@ -9,41 +9,35 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-header" style="color: black;font-weight:bold;font-size:122%">Menu</li>
 
-        <!--<li class="nav-item" style="background-color: #1b3b40">
-          <a href="{{ url('/') }}" class="nav-link {{ ($activeMenu == 'dashboard')? 'active' : '' }} ">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>DASHBOARD</p>
-          </a>
-        </li>-->
-
+        
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-            <a href="{{ url('/dashboardrw') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
+            <a href="{{ url('/dashboardrw') }}" class="nav-link">
                 <i class="nav-icon fas fa-home"></i>
               <p>DASHBOARD</p>
             </a>
           </li>
 
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-          <a href="{{ url('/datapengajuan') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
+          <a href="{{ url('/datapengajuan') }}" class="nav-link">
             <i class="nav-icon fas fa-layer-group"></i>
             <p>PENGAJUAN</p>
           </a>
         </li>
         <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-          <a href="{{ url('/validasi') }}" class="nav-link {{ ($activeMenu == 'user')? 'active' : '' }}">
+          <a href="{{ url('/validasi') }}" class="nav-link ">
             <i class="nav-icon far fa-user"></i>
             <p>VALIDASI</p>
           </a>
         </li>
 
         <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
-          <a href="{{ url('/laporanpengajuanrw') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
+          <a href="{{ url('/laporanpengajuanrw') }}" class="nav-link ">
               <i class="nav-icon far fa-bookmark"></i>
               <p>LAPORAN PENGAJUAN</p>
           </a>
       </li>
       <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
-        <a href="{{ url('/laporanpenerimaanrw') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
+        <a href="{{ url('/laporanpenerimaanrw') }}" class="nav-link ">
             <i class="nav-icon fas fa-book"></i>
             <p>LAPORAN PENERIMAAN</p>
         </a>

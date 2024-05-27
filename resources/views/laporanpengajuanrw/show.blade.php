@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h1 style="font-size:30px;font-weight:bold;text-align:center;">{{__('Detail Pengajuan')}}</h1>
+        <h1 style="font-size:30px;font-weight:bold;text-align:center;">{{__('Detail Laporan Pengajuan')}}</h1>
         <div class="card-tools"></div>
     </div>
     <div class="card-body">
@@ -22,7 +22,11 @@
                 <td></td>
             </tr>
             <tr>
-                <th>Pekerjaan</th>
+                <th>Jenis Bansos</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Status</th>
                 <td></td>
             </tr>
             <tr>
@@ -30,7 +34,7 @@
                 <td></td>
             </tr>
         </table>
-        <a href="{{ url('datapengajuan') }}" class="btn btn-sm btn-default mt-2">Kembali</a>
+        <a href="{{ url('laporanpengajuanrw') }}" class="btn btn-sm btn-default mt-2">Kembali</a>
     </div>
 </div>
 

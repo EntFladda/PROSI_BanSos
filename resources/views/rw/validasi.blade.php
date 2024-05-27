@@ -237,4 +237,23 @@
                 </table>
             </div>
         </div>
+        $('.btn-delete').on('click', function() {
+            if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                var id = $(this).data('id');
+                $.ajax({
+                    url: '/penerimas/' + id,
+                    type: 'DELETE',
+                    data: {
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function(response) {
+                        alert('Data berhasil dihapus');
+                        location.reload();
+                    },
+                    error: function(xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            }
+        });
     @endsection
