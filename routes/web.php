@@ -41,6 +41,7 @@ Route::get('/laporanpengajuanrw/detail/{id}', [RWController::class,'laporanpenga
 Route::get('/laporanpenerimaanrw', [RWController::class,'laporanpenerimaanrw']);
 Route::get('/laporanpenerimaanrw/detail/{id}', [RWController::class,'laporanpenerimaanrwdetail']);
 Route::get('/validasi', [RWController::class,'validasi']);
+Route::get('/aras', [RWController::class,'aras']);
 Route::get('/validasi/detail/{id}', [RWController::class,'validasidetail']);
 Route::delete('/validasi/delete/{id}', [RWController::class,'delete']);
 

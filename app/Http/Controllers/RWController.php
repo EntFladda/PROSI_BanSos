@@ -120,4 +120,15 @@ class RWController extends Controller
 
         return view('laporanpenerimaanrw.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+
+    public function aras(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['aras', 'Welcome']
+        ];
+
+        $activeMenu = 'aras';
+
+        return view('rw.aras', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }
