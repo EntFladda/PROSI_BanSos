@@ -87,6 +87,17 @@
 
         </div>
         <div class="card-body">
+            <nav id="navbar" class="navbar">
+                <tr>
+                  <th><a class="nav-link scrollto active" href="#hero">Data Kriteria</a></th>
+                  <th><a class="nav-link scrollto" href="#about">Data Sub Kriteria</a></th>
+                  <th><a class="nav-link scrollto" href="#fitur">Data Alternatif</a></th>
+                  <th><a class="nav-link scrollto" href="#team">Data Penilaian</a></th>
+                  <th><a class="nav-link scrollto" href="#fitur">Data Perhitungan</a></th>
+                  <th><a class="nav-link scrollto" href="#team">Data Hasil Akhir</a></th>
+                </tr>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+              </nav><!-- .navbar -->
             <div class="card-body">
                 <div class="info-button">
                 </div>
