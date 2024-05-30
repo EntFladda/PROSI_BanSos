@@ -51,10 +51,10 @@
             <tr>
                 <th style="text-align: center;">No</th>
                 <th style="text-align: center;">Aksi</th>
-                <th style="text-align: center;">NAMA</th>
-                <th style="text-align: center;">NO KK</th>
-                <th style="text-align: center;">JENIS BANSOS</th>
-                <th style="text-align: center;">AKSI</th>
+                <th style="text-align: center;">Nama</th>
+                <th style="text-align: center;">No. KK</th>
+                <th style="text-align: center;">Jenis Bansos</th>
+                <th style="text-align: center;">Aksi</th>
             </tr>
         </table>
     </div>

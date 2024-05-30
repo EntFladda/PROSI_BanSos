@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\RTController;
@@ -19,6 +20,31 @@ use App\Http\Controllers\WelcomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//Show Login Form
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+// Define routes for each role's dashboard
+// Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+Route::get('/dashboardm', [MasyarakatController::class, 'dashboardm'])->name('dashboardm');
+Route::get('/dashboardrt', [RtController::class, 'dashboardrt'])->name('dashboardrt');
+Route::get('/dashboardrw', [RwController::class, 'dashboardrw'])->name('dashboardrw');
+Route::get('/dashboardk', [KelurahanController::class, 'dashboardk'])->name('dashboardk');
+
+// Home route
+Route::get('/home', [HomeController::class, 'showHome'])->name('home');
+
+//Show register form
+
+Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('register', [RegisterController::class, 'register']);
+
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+// Handle login
+Route::post('/login', [LoginController::class, 'login']);
+
 // Masyarakat
 Route::get('/informasi', [MasyarakatController::class,'informasi']);
 Route::get('/konfirmasi', [MasyarakatController::class,'konfirmasi']);
@@ -39,29 +65,3 @@ Route::get('/validasi', [RWController::class,'validasi']);
 Route::get('/informasik', [KelurahanController::class,'informasik']);
 Route::get('/laporanpenerimaank', [KelurahanController::class,'laporanpenerimaank']);
 Route::get('/validasik', [KelurahanController::class,'validasik']);
-
-//Show Login Form
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-
-// Define routes for each role's dashboard
-// Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-Route::get('/dashboardm', [MasyarakatController::class, 'dashboardm'])->name('dashboardm');
-Route::get('/dashboardrt', [RtController::class, 'dashboardrt'])->name('dashboardrt');
-Route::get('/dashboardrw', [RwController::class, 'dashboardrw'])->name('dashboardrw');
-Route::get('/dashboardk', [KelurahanController::class, 'dashboardk'])->name('dashboardk');
-
-// Home route
-// Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-//Show register form
-
-Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('register', [RegisterController::class, 'register']);
-
-
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-
-// Handle login
-Route::post('/login', [LoginController::class, 'login']);
