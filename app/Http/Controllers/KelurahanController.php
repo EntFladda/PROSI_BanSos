@@ -29,7 +29,7 @@ class KelurahanController extends Controller
     {
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Informasi', 'Welcome']
         ];
 
         $activeMenu = 'informasik';
@@ -40,7 +40,7 @@ class KelurahanController extends Controller
     {
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Laporan Penerimaan', 'Welcome']
         ];
 
         $activeMenu = 'laporanpenerimaank';
@@ -50,11 +50,43 @@ class KelurahanController extends Controller
     public function validasik(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Validasi', 'Welcome']
         ];
 
         $activeMenu = 'validasik';
 
         return view('kelurahan.validasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function informasikdetail()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Informasi', 'Welcome']
+        ];
+
+        $activeMenu = 'informasikdetail';
+
+        return view('informasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function laporanpenerimaankdetail()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Laporan Penerimaan', 'Welcome']
+        ];
+
+        $activeMenu = 'laporanpenerimaankdetail';
+
+        return view('laporanpenerimaank.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function validasikdetail(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Validasi', 'Welcome']
+        ];
+
+        $activeMenu = 'validasikdetail';
+
+        return view('validasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }

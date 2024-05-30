@@ -56,27 +56,27 @@
             </tr>
             <tr>
                 <td>1</td>
-                <td><a href="#" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
+                <td><a href="{{ url('/informasi/detail/1') }}" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td style="font-weight: bold">Bantuan Pangan Non Tunai (BPNT)</td>
-                <td><a href="#" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
+                <td><a href="/pengajuanm" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
             </tr>
             <tr>
                 <td>2</td>
-                <td><a href="#" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
+                <td><a href="{{ url('/informasi/detail/2') }}" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td style="font-weight: bold">Program Keluarga Harapan (PKH)</td>
-                <td><a href="#" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
+                <td><a href="/pengajuanm" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
             </tr>
             <tr>
                 <td>3</td>
-                <td><a href="#" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
+                <td><a href="{{ url('/informasi/detail/3') }}" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td style="font-weight: bold">Bantuan Langsung Tunai</td>
-                <td><a href="#" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
+                <td><a href="/pengajuanm" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
             </tr>
             <tr>
                 <td>4</td>
-                <td><a href="#" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
+                <td><a href="{{ url('/informasi/detail/4') }}" class="btn"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td style="font-weight: bold">Bantuan Sosial Beras</td>
-                <td><a href="#" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
+                <td><a href="/pengajuanm" class="btn"><i class="fas fa-plus-circle"></i> Tambah Pengajuan Bansos</a></td>
             </tr>
         </table>
     </div>

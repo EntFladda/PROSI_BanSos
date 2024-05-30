@@ -1,7 +1,7 @@
 @extends('rt.template')
 
 @section('content')
-<h1 style="font-size:30px;font-weight:bold;text-align:center;">LIHAT LAPORAN PENGAJUAN</h1>
+
 <style>
   table {
         width: 100%;
@@ -94,7 +94,7 @@
 </style>
 <div class="card">
     <div class="card-header">
-        
+      <h1 style="font-size:30px;font-weight:bold;text-align:center;">LIHAT LAPORAN PENGAJUAN</h1>
         <div class="card-tools"></div>
     </div>
     <div class="card-body">
@@ -125,7 +125,7 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td><a href="#" class="btn-detail">Detail</a></td>
+                <td><a href="{{ url('/laporanpengajuan/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Lisa</td>
                 <td>0100100001001010</td>
                 <td>BLT</td>
@@ -134,7 +134,7 @@
               </tr>
               <tr>
                 <td>2</td>
-                <td><a href="#" class="btn-detail">Detail</a></td>
+                <td><a href="{{ url('/laporanpengajuan/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Rose</td>
                 <td>0100100001001010</td>
                 <td>PKH</td>
@@ -143,7 +143,7 @@
               </tr>
               <tr>
                 <td>3</td>
-                <td><a href="#" class="btn-detail">Detail</a></td>
+                <td><a href="{{ url('/laporanpengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Jisoo</td>
                 <td>0100100001001010</td>
                 <td>BPNT</td>

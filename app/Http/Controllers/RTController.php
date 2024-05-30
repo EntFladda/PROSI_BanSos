@@ -29,7 +29,7 @@ class RTController extends Controller
     public function pengajuan(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Pengajuan', 'Welcome']
         ];
 
         $activeMenu = 'pengajuan';
@@ -39,7 +39,7 @@ class RTController extends Controller
     public function laporanpengajuan(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Laporan Pengajuan', 'Welcome']
         ];
 
         $activeMenu = 'laporanpengajuan';
@@ -49,7 +49,7 @@ class RTController extends Controller
     public function laporanpenerimaan(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Laporan Penerimaan', 'Welcome']
         ];
 
         $activeMenu = 'laporanpenerimaan';
@@ -59,11 +59,31 @@ class RTController extends Controller
     public function pengajuanrt(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Pengajuan', 'Welcome']
         ];
 
         $activeMenu = 'pengajuanrt';
 
         return view('rt.pengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function laporanpengajuandetail(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Laporan Pengajuan', 'Welcome']
+        ];
+
+        $activeMenu = 'laporanpengajuandetail';
+
+        return view('laporanpengajuanrt.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function laporanpenerimaandetail(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Laporan Penerimaan', 'Welcome']
+        ];
+
+        $activeMenu = 'laporanpenerimaandetail';
+
+        return view('laporanpenerimaanrt.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }

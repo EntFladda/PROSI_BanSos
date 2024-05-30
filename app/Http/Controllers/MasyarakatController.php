@@ -27,7 +27,7 @@ class MasyarakatController extends Controller
     public function informasi(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Informasi', 'Welcome']
         ];
 
         $activeMenu = 'informasi';
@@ -37,7 +37,7 @@ class MasyarakatController extends Controller
     public function konfirmasi(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Konfirmasi', 'Welcome']
         ];
 
         $activeMenu = 'konfirmasi';
@@ -47,11 +47,31 @@ class MasyarakatController extends Controller
     public function pengajuanm(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['Home', 'Welcome']
+            'list' => ['Pengajuan', 'Welcome']
         ];
 
         $activeMenu = 'pengajuanm';
 
         return view('masyarakat.pengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function informasidetail(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Informasi', 'Welcome']
+        ];
+
+        $activeMenu = 'informasidetail';
+
+        return view('informasim.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function konfirmasidetail(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Konfirmasi', 'Welcome']
+        ];
+
+        $activeMenu = 'konfirmasidetail';
+
+        return view('konfirmasi.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }
