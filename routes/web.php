@@ -75,36 +75,6 @@ Route::delete('/validasi/delete/{id}', [RWController::class,'delete']);
 Route::get('/informasik', [KelurahanController::class,'informasik']);
 Route::get('/informasik/detail/{id}', [KelurahanController::class,'informasikdetail']);
 Route::get('/laporanpenerimaank', [KelurahanController::class,'laporanpenerimaank']);
-<<<<<<< HEAD
-Route::get('/validasik', [KelurahanController::class,'validasik']);
-=======
 Route::get('/laporanpenerimaank/detail/{id}', [KelurahanController::class,'laporanpenerimaankdetail']);
 Route::get('/validasik', [KelurahanController::class,'validasik']);
 Route::get('/validasik/detail/{id}', [KelurahanController::class,'validasikdetail']);
-
-//Show Login Form
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-
-// Define routes for each role's dashboard
-// Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-Route::get('/dashboardm', [MasyarakatController::class, 'dashboardm'])->name('dashboardm');
-Route::get('/dashboardrt', [RtController::class, 'dashboardrt'])->name('dashboardrt');
-Route::get('/dashboardrw', [RwController::class, 'dashboardrw'])->name('dashboardrw');
-Route::get('/dashboardk', [KelurahanController::class, 'dashboardk'])->name('dashboardk');
-
-// Home route
-// Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-//Show register form
-
-Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('register', [RegisterController::class, 'register']);
-
-
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-
-// Handle login
-Route::post('/login', [LoginController::class, 'login']);
->>>>>>> 9eb9cfa86db6044315db92931771ef33852ae680
