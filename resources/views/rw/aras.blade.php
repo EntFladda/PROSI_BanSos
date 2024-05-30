@@ -79,6 +79,49 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
+        .btn-success1 {
+            background-color:#1A4D2E;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-success2 {
+            background-color:#AF8260;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-success3 {
+            background-color:#8E3E63;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-success4 {
+            background-color:#D10363;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-success5 {
+            background-color:#028391;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-success6 {
+            background-color:#FF7D29;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
     </style>
     <div class="card">
         <div class="card-header">
@@ -89,15 +132,15 @@
         <div class="card-body">
             <nav id="navbar" class="navbar">
                 <tr>
-                  <th><a class="nav-link scrollto active" href="#hero">Data Kriteria</a></th>
-                  <th><a class="nav-link scrollto" href="#about">Data Sub Kriteria</a></th>
-                  <th><a class="nav-link scrollto" href="#fitur">Data Alternatif</a></th>
-                  <th><a class="nav-link scrollto" href="#team">Data Penilaian</a></th>
-                  <th><a class="nav-link scrollto" href="#fitur">Data Perhitungan</a></th>
-                  <th><a class="nav-link scrollto" href="#team">Data Hasil Akhir</a></th>
+                    <th><a class="btn-success1" href="/data_kriteria_aras">Data Kriteria</a></th>
+                    <th><a class="btn-success2" href="/data_sub_kriteria">Data Sub Kriteria</a></th>
+                    <th><a class="btn-success3" href="/data_alternatif">Data Alternatif</a></th>
+                    <th><a class="btn-success4" href="/data_penilaian">Data Penilaian</a></th>
+                    <th><a class="btn-success5" href="/data_perhitungan">Data Perhitungan</a></th>
+                    <th><a class="btn-success6" href="/data_hasil_akhir">Data Hasil Akhir</a></th>
                 </tr>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-              </nav><!-- .navbar -->
+            </nav><!-- .navbar -->
             <div class="card-body">
                 <div class="info-button">
                 </div>
