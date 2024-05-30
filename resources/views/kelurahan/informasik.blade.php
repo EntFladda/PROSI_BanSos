@@ -99,7 +99,7 @@
                     <td>1</td>
                     <td><a href="{{ url('/informasik/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
                         <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
-                        <a href="/delete_informasi_kelurahan" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
+                        <a href="{{ url('/delete') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
                     </td>
                     <td>Bantuan Pangan Non Tunai (BPNT)</td>
                 </tr>
@@ -130,4 +130,25 @@
             </table>
         </div>
     </div>
+    <script>
+        $('.btn-delete').on('click', function() {
+                if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                    var id = $(this).data('id');
+                    $.ajax({
+                        url: '/penerimas/' + id,
+                        type: 'DELETE',
+                        data: {
+                            _token: '{{ csrf_token() }}'
+                        },
+                        success: function(response) {
+                            alert('Data berhasil dihapus');
+                            location.reload();
+                        },
+                        error: function(xhr) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                }
+            });
+        </script>
 @endsection

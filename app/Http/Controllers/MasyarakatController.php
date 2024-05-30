@@ -62,7 +62,7 @@ class MasyarakatController extends Controller
 
         $activeMenu = 'informasidetail';
 
-        return view('informasim.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('masyarakat.informasim.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function konfirmasidetail(){
         $breadcrumb = (object) [
@@ -72,6 +72,6 @@ class MasyarakatController extends Controller
 
         $activeMenu = 'konfirmasidetail';
 
-        return view('konfirmasi.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('masyarakat.konfirmasi.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }

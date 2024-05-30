@@ -87,7 +87,7 @@ class RWController extends Controller
 
         $activeMenu = 'validasidetail';
 
-        return view('validasi.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('rw.validasi.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function delete()
     {
@@ -108,7 +108,7 @@ class RWController extends Controller
 
         $activeMenu = 'laporanpengajuanrwdetail';
 
-        return view('laporanpengajuanrw.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('rw.laporanpengajuanrw.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function laporanpenerimaanrwdetail(){
         $breadcrumb = (object) [
@@ -118,13 +118,13 @@ class RWController extends Controller
 
         $activeMenu = 'laporanpenerimaanrwdetail';
 
-        return view('laporanpenerimaanrw.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('rw.laporanpenerimaanrw.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 
     public function aras(){
         $breadcrumb = (object) [
             'title' => '',
-            'list' => ['aras', 'Welcome']
+            'list' => ['Aras', 'Welcome']
         ];
 
         $activeMenu = 'aras';
