@@ -51,7 +51,7 @@
             <tr>
                 <th style="text-align: center;">No</th>
                 <th style="text-align: center;">Aksi</th>
-                <th style="text-align: center;">JENIS BANSOS</th>
+                <th style="text-align: center;">Jenis Bansos</th>
                 <th></th>
             </tr>
             <tr>

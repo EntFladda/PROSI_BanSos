@@ -85,4 +85,21 @@
             </table>
         </div>
     </div>
+<<<<<<< HEAD
+    <div class="card-body">
+        <table style="width: 100%;border-collapse: collapse;margin-top: 20px;border: 1px solid #bdc3c7;">
+            <tr>
+                <th style="text-align: center;">No</th>
+                <th style="text-align: center;">Aksi</th>
+                <th style="text-align: center;">Nama</th>
+                <th style="text-align: center;">No. KK</th>
+                <th style="text-align: center;">Jenis Bansos</th>
+                <th style="text-align: center;">Aksi</th>
+            </tr>
+        </table>
+    </div>
+</div>
 @endsection
+=======
+@endsection
+>>>>>>> 9eb9cfa86db6044315db92931771ef33852ae680
