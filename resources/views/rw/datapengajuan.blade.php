@@ -115,37 +115,37 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Aksi</th>
                     <th>Nama</th>
                     <th>No Kartu Keluarga</th>
                     <th>Pekerjaan</th>
                     <th>Tanggal Pengajuan</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><a href="{{ url('/datapengajuan/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     <td>Lisa</td>
                     <td>0100100001001010</td>
                     <td>Petani</td>
                     <td>11-04-2024</td>
+                    <td><a href="{{ url('/datapengajuan/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><a href="{{ url('/datapengajuan/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     <td>Rose</td>
                     <td>0100100001001010</td>
                     <td>Wiraswasta</td>
                     <td>12-09-2024</td>
+                    <td><a href="{{ url('/datapengajuan/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     <td>Jisoo</td>
                     <td>0100100001001010</td>
                     <td>Ibu Rumah Tangga</td>
                     <td>26-05-2024</td>
+                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 </tr>
             </tbody>
         </table>

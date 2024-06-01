@@ -100,4 +100,24 @@ class KelurahanController extends Controller
 
         return view('kelurahan.validasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    public function validasiksetuju(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Validasi', 'Welcome']
+        ];
+
+        $activeMenu = 'validasiksetuju';
+
+        return view('kelurahan.validasiksetuju.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function validasiktolak(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Validasi', 'Welcome']
+        ];
+
+        $activeMenu = 'validasiktolak';
+
+        return view('kelurahan.validasiktolak.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }

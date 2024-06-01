@@ -126,37 +126,37 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Aksi</th>
                         <th>Nama</th>
                         <th>No Kartu Keluarga</th>
                         <th>Jenis Bansos</th>
+                        <th>Status</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Lisa</td>
                         <td>0100100001001010</td>
                         <td>BLT</td>
                         <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Rose</td>
                         <td>0100100001001010</td>
                         <td>PKH</td>
                         <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Jisoo</td>
                         <td>0100100001001010</td>
                         <td>BPNT</td>
                         <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                     </tr>
                 </tbody>
             </table>

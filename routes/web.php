@@ -76,6 +76,8 @@ Route::get('/data_alternatif', [RWController::class,'data_alternatif']);
 Route::get('/data_penilaian', [RWController::class,'data_penilaian']);
 Route::get('/data_perhitungan', [RWController::class,'data_perhitungan']);
 Route::get('/data_hasil_akhir', [RWController::class,'data_hasil_akhir']);
+Route::get('/lihat_pengajuan_disetujui/{id}', [RWController::class,'validasisetuju']);
+Route::get('/lihat_pengajuan_ditolak/{id}', [RWController::class,'validasitolak']);
 
 // Kelurahan
 Route::get('/informasik', [KelurahanController::class,'informasik']);
@@ -86,6 +88,8 @@ Route::get('/validasik', [KelurahanController::class,'validasik']);
 Route::get('/laporanpenerimaank/detail/{id}', [KelurahanController::class,'laporanpenerimaankdetail']);
 Route::get('/validasik', [KelurahanController::class,'validasik']);
 Route::get('/validasik/detail/{id}', [KelurahanController::class,'validasikdetail']);
+Route::get('/lihat_pengajuan_disetujui/{id}', [KelurahanController::class,'validasiksetuju']);
+Route::get('/lihat_pengajuan_ditolak/{id}', [KelurahanController::class,'validasiktolak']);
 
 //Show Login Form
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');

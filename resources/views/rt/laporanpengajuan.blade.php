@@ -114,41 +114,41 @@
             <thead>
               <tr>
                 <th style="text-align: center">No</th>
-                <th style="text-align: center">Aksi</th>
                 <th style="text-align: center">Nama</th>
                 <th style="text-align: center">No Kartu Keluarga</th>
                 <th style="text-align: center">Jenis Bansos</th>
                 <th style="text-align: center">Status</th>
                 <th style="text-align: center">Tanggal Pengajuan</th>
+                <th style="text-align: center">Aksi</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>1</td>
-                <td><a href="{{ url('/laporanpengajuan/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Lisa</td>
                 <td>0100100001001010</td>
                 <td>BLT</td>
                 <td>Disetujui</td>
                 <td>11-04-2024</td>
+                <td><a href="{{ url('/laporanpengajuan/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
               </tr>
               <tr>
                 <td>2</td>
-                <td><a href="{{ url('/laporanpengajuan/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Rose</td>
                 <td>0100100001001010</td>
                 <td>PKH</td>
                 <td>Ditolak</td>
                 <td>12-09-2024</td>
+                <td><a href="{{ url('/laporanpengajuan/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
               </tr>
               <tr>
                 <td>3</td>
-                <td><a href="{{ url('/laporanpengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Jisoo</td>
                 <td>0100100001001010</td>
                 <td>BPNT</td>
                 <td>Disetujui</td>
                 <td>26-05-2024</td>
+                <td><a href="{{ url('/laporanpengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
               </tr>
             </tbody>
           </table>

@@ -191,4 +191,24 @@ class RWController extends Controller
 
         return view('rw.data_hasil_akhir', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    public function validasisetuju(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Validasi', 'Welcome']
+        ];
+
+        $activeMenu = 'validasisetuju';
+
+        return view('rw.validasiksetuju.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function validasitolak(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Validasi', 'Welcome']
+        ];
+
+        $activeMenu = 'validasitolak';
+
+        return view('rw.validasiktolak.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
 }
