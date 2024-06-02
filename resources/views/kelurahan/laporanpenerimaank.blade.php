@@ -103,6 +103,13 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .btn-secondary {
+            background-color: #1b3b40;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
     </style>
     <div class="card">
         <div class="card-header">
@@ -126,37 +133,43 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Aksi</th>
                         <th>Nama</th>
                         <th>No Kartu Keluarga</th>
                         <th>Jenis Bansos</th>
+                        <th>Status</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Lisa</td>
                         <td>0100100001001010</td>
                         <td>BLT</td>
                         <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <button class="btn btn-secondary" onclick="cetakLaporan(1)"><i class="fas fa-solid fa-print"></i>Cetak</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Rose</td>
                         <td>0100100001001010</td>
                         <td>PKH</td>
                         <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <button class="btn btn-secondary" onclick="cetakLaporan(2)"><i class="fas fa-solid fa-print"></i>Cetak</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                         <td>Jisoo</td>
                         <td>0100100001001010</td>
                         <td>BPNT</td>
                         <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <button class="btn btn-secondary" onclick="cetakLaporan(3)"><i class="fas fa-solid fa-print"></i>Cetak</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -167,6 +180,26 @@
                     <a href="#" class="pagination-link next">Next</a>
                 </div>
             </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script>
+        function cetakLaporan(id) {
+            var detailUrl = "{{ url('/laporanpenerimaank/detail/') }}/" + id;
+            var newWindow = window.open(detailUrl, '', 'width=800,height=600');
+            newWindow.print();
+        }
+
+        function saveAsPDF(id) {
+            var detailUrl = "{{ url('/laporanpenerimaanrw/detail/') }}/" + id;
+            fetch(detailUrl)
+                .then(response => response.text())
+                .then(html => {
+                    const { jsPDF } = window.jspdf;
+                    const doc = new jsPDF();
+                    doc.fromHTML(html, 10, 10);
+                    doc.save('laporan-bansos-' + id + '.pdf');
+                });
+        }
+    </script>
         </div>
     </div>
 @endsection

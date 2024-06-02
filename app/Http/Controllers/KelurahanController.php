@@ -36,6 +36,17 @@ class KelurahanController extends Controller
 
         return view('kelurahan.informasik', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
+    public function delete()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Informasi', 'Welcome']
+        ];
+
+        $activeMenu = 'informasik/delete';
+
+        return view('kelurahan.informasik', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
     public function laporanpenerimaank()
     {
         $breadcrumb = (object) [
@@ -66,7 +77,7 @@ class KelurahanController extends Controller
 
         $activeMenu = 'informasikdetail';
 
-        return view('informasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('kelurahan.informasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function laporanpenerimaankdetail()
     {
@@ -77,7 +88,7 @@ class KelurahanController extends Controller
 
         $activeMenu = 'laporanpenerimaankdetail';
 
-        return view('laporanpenerimaank.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('kelurahan.laporanpenerimaank.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function validasikdetail(){
         $breadcrumb = (object) [
@@ -87,6 +98,26 @@ class KelurahanController extends Controller
 
         $activeMenu = 'validasikdetail';
 
-        return view('validasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('kelurahan.validasik.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function validasiksetuju(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Validasi', 'Welcome']
+        ];
+
+        $activeMenu = 'validasiksetuju';
+
+        return view('kelurahan.validasiksetuju.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function validasiktolak(){
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Validasi', 'Welcome']
+        ];
+
+        $activeMenu = 'validasiktolak';
+
+        return view('kelurahan.validasiktolak.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }

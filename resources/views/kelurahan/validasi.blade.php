@@ -104,46 +104,46 @@
                 <table style="width: 100%;border-collapse: collapse;margin-top: 20px;border: 1px solid #bdc3c7;">
                     <tr>
                         <th style="text-align: center;">No</th>
-                        <th style="text-align: center;">Aksi</th>
                         <th style="text-align: center;">NAMA</th>
                         <th style="text-align: center;">NO KARTU KELUARGA</th>
                         <th style="text-align: center;">TANGGAL PENGAJUAN</th>
-                        <th style="text-align: center;">AKSI</th>
+                        <th style="text-align: center;">STATUS</th>
+                        <th style="text-align: center;">Aksi</th>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="{{ url('/validasik/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <a href="{{ url('/delete/1') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
-                        </td>
                         <td>Lisa</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
                         <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
                             <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
                         </td>
+                        <td><a href="{{ url('/validasik/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/1') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="{{ url('/validasik/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <a href="{{ url('/delete/2') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
-                        </td>
                         <td>Rose</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
                         <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
                             <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
                         </td>
+                        <td><a href="{{ url('/validasik/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/2') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="{{ url('/validasik/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <a href="{{ url('/delete/3') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
-                        </td>
                         <td>Jiso</td>
                         <td>000900</td>
                         <td>11 April 2024</td>
                         <td><a href="/pengajuan_disetujui" class="btn-success">Disetujui</a>
                             <a href="/pengajuan_ditolak" class="btn-delete">Ditolak</a>
+                        </td>
+                        <td><a href="{{ url('/validasik/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                            <a href="{{ url('/delete/3') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete</a>
                         </td>
                     </tr>
                 </table>
@@ -157,34 +157,34 @@
                 <table style="width: 100%;border-collapse: collapse;margin-top: 20px;border: 1px solid #bdc3c7;">
                     <tr>
                         <th style="text-align: center;">No</th>
-                        <th style="text-align: center;">Aksi</th>
                         <th style="text-align: center;">NAMA</th>
                         <th style="text-align: center;">NO KARTU KELUARGA</th>
                         <th style="text-align: center;">STATUS</th>
+                        <th style="text-align: center;">Aksi</th>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                        </td>
                         <td>Lisa</td>
                         <td>000900</td>
                         <td><a href="#" class="btn-success">Disetujui</a></td>
+                        <td><a href="/lihat_pengajuan_disetujui/{id}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                        </td>
                         <td>Rose</td>
                         <td>000900</td>
                         <td><a href="#" class="btn-success">Disetujui</a></td>
+                        <td><a href="/lihat_pengajuan_disetujui/{id}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="/lihat_pengajuan_disetujui" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                        </td>
                         <td>Jiso</td>
                         <td>000900</td>
                         <td><a href="#" class="btn-success">Disetujui</a></td>
+                        <td><a href="/lihat_pengajuan_disetujui/{id}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -197,41 +197,39 @@
                 <table style="width: 100%;border-collapse: collapse;margin-top: 20px;border: 1px solid #bdc3c7;">
                     <tr>
                         <th style="text-align: center;">No</th>
-                        <th style="text-align: center;">Aksi</th>
                         <th style="text-align: center;">NAMA</th>
                         <th style="text-align: center;">NO KARTU KELUARGA</th>
                         <th style="text-align: center;">STATUS</th>
+                        <th style="text-align: center;">Aksi</th>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                        </td>
                         <td>Lisa</td>
                         <td>000900</td>
-
                         <td>
                             <a href="#" class="btn-delete">Ditolak</a>
+                        </td>
+                        <td><a href="/lihat_pengajuan_ditolak/{id}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                        </td>
                         <td>Rose</td>
                         <td>000900</td>
                         <td>
                             <a href="#" class="btn-delete">Ditolak</a>
                         </td>
+                        <td><a href="/lihat_pengajuan_ditolak/{id}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><a href="/lihat_pengajuan_ditolak" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                        </td>
                         <td>Jiso</td>
                         <td>000900</td>
-
                         <td>
                             <a href="#" class="btn-delete">Ditolak</a>
+                        </td>
+                        <td><a href="/lihat_pengajuan_ditolak/{id}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
                         </td>
                     </tr>
                 </table>

@@ -1,7 +1,7 @@
 @extends('rw.template')
 
 @section('content')
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
   table {
         width: 100%;
@@ -38,23 +38,29 @@
     }
 
     .btn i {
-        margin-right: 5px;
+      margin-right: 5px;
     }
     .data-table .btn-detail {
-  background-color: #1b3b40;
-  color: #fff;
-  padding: 5px 10px;
-  text-decoration: none;
-  border-radius: 5px;
+      background-color: #1b3b40;
+      color: #fff;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
     }
-    
+    .btn-secondary {
+      background-color: #1b3b40;
+      color: #fff;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
 
     .table-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
 
 .entries-per-page {
   display: flex;
@@ -114,37 +120,49 @@
             <thead>
               <tr>
                 <th>No</th>
-                <th>Aksi</th>
                 <th>Nama</th>
                 <th>No Kartu Keluarga</th>
                 <th>Jenis Bansos</th>
                 <th>Tanggal Diterima</th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr id="row-1">
                 <td>1</td>
-                <td><a href="{{ url('/laporanpenerimaanrw/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Lisa</td>
                 <td>0100100001001010</td>
                 <td>BLT</td>
                 <td>11-04-2024</td>
+                <td>
+                    <a href="{{ url('/laporanpenerimaanrw/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                    <button class="btn btn-secondary" onclick="cetakLaporan(1)"><i class="fas fa-solid fa-print"></i>Cetak</button>
+                    <!--<button class="btn btn-secondary" onclick="saveAsPDF(1)">Save as PDF</button>-->
+                </td>
               </tr>
-              <tr>
+              <tr id="row-2">
                 <td>2</td>
-                <td><a href="{{ url('/laporanpenerimaanrw/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Rose</td>
                 <td>0100100001001010</td>
                 <td>PKH</td>
                 <td>12-09-2024</td>
+                <td>
+                    <a href="{{ url('/laporanpenerimaanrw/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                    <button class="btn btn-secondary" onclick="cetakLaporan(2)"><i class="fas fa-solid fa-print"></i>Cetak</button>
+                    <!--<button class="btn btn-secondary" onclick="saveAsPDF(1)">Save as PDF</button>-->
+                </td>
               </tr>
-              <tr>
+              <tr id="row-3">
                 <td>3</td>
-                <td><a href="{{ url('/laporanpenerimaanrw/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 <td>Jisoo</td>
                 <td>0100100001001010</td>
                 <td>BPNT</td>
                 <td>26-05-2024</td>
+                <td>
+                    <a href="{{ url('/laporanpenerimaanrw/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                    <button class="btn btn-secondary" onclick="cetakLaporan(3)"><i class="fas fa-solid fa-print"></i>Cetak</button>
+                    <!--<button class="btn btn-secondary" onclick="saveAsPDF(1)">Save as PDF</button>-->
+                </td>
               </tr>
             </tbody>
           </table>
@@ -155,6 +173,26 @@
               <a href="#" class="pagination-link next">Next</a>
             </div>
           </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script>
+        function cetakLaporan(id) {
+            var detailUrl = "{{ url('/laporanpenerimaanrw/detail/') }}/" + id;
+            var newWindow = window.open(detailUrl, '', 'width=800,height=600');
+            newWindow.print();
+        }
+
+        function saveAsPDF(id) {
+            var detailUrl = "{{ url('/laporanpenerimaanrw/detail/') }}/" + id;
+            fetch(detailUrl)
+                .then(response => response.text())
+                .then(html => {
+                    const { jsPDF } = window.jspdf;
+                    const doc = new jsPDF();
+                    doc.fromHTML(html, 10, 10);
+                    doc.save('laporan-bansos-' + id + '.pdf');
+                });
+        }
+    </script>
     </div>
 </div>
 @endsection

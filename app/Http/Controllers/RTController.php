@@ -74,7 +74,7 @@ class RTController extends Controller
 
         $activeMenu = 'laporanpengajuandetail';
 
-        return view('laporanpengajuanrt.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('rt.laporanpengajuanrt.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function laporanpenerimaandetail(){
         $breadcrumb = (object) [
@@ -84,6 +84,6 @@ class RTController extends Controller
 
         $activeMenu = 'laporanpenerimaandetail';
 
-        return view('laporanpenerimaanrt.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('rt.laporanpenerimaanrt.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
 }

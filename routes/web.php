@@ -67,9 +67,17 @@ Route::get('/laporanpengajuanrw/detail/{id}', [RWController::class,'laporanpenga
 Route::get('/laporanpenerimaanrw', [RWController::class,'laporanpenerimaanrw']);
 Route::get('/laporanpenerimaanrw/detail/{id}', [RWController::class,'laporanpenerimaanrwdetail']);
 Route::get('/validasi', [RWController::class,'validasi']);
-Route::get('/aras', [RWController::class,'aras']);
 Route::get('/validasi/detail/{id}', [RWController::class,'validasidetail']);
 Route::delete('/validasi/delete/{id}', [RWController::class,'delete']);
+Route::get('/aras', [RWController::class,'aras']);
+Route::get('/data_kriteria_aras', [RWController::class,'data_kriteria_aras']);
+Route::get('/data_sub_kriteria', [RWController::class,'data_sub_kriteria']);
+Route::get('/data_alternatif', [RWController::class,'data_alternatif']);
+Route::get('/data_penilaian', [RWController::class,'data_penilaian']);
+Route::get('/data_perhitungan', [RWController::class,'data_perhitungan']);
+Route::get('/data_hasil_akhir', [RWController::class,'data_hasil_akhir']);
+Route::get('/lihat_pengajuan_disetujui/{id}', [RWController::class,'validasisetuju']);
+Route::get('/lihat_pengajuan_ditolak/{id}', [RWController::class,'validasitolak']);
 
 // Kelurahan
 Route::get('/informasik', [KelurahanController::class,'informasik']);
@@ -81,6 +89,8 @@ Route::get('/validasik', [KelurahanController::class,'validasik']);
 Route::get('/laporanpenerimaank/detail/{id}', [KelurahanController::class,'laporanpenerimaankdetail']);
 Route::get('/validasik', [KelurahanController::class,'validasik']);
 Route::get('/validasik/detail/{id}', [KelurahanController::class,'validasikdetail']);
+Route::get('/lihat_pengajuan_disetujui/{id}', [KelurahanController::class,'validasiksetuju']);
+Route::get('/lihat_pengajuan_ditolak/{id}', [KelurahanController::class,'validasiktolak']);
 
 //Show Login Form
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -106,4 +116,6 @@ Route::post('register', [RegisterController::class, 'register']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 // Handle login
+Route::post('/login', [LoginController::class, 'login']);
+
 Route::post('/login', [LoginController::class, 'login']);
