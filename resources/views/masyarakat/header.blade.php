@@ -47,6 +47,7 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           
           <div class="dropdown-divider"></div>
+
           <a href="{{ url('/logout') }}" class="dropdown-item"
             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             <i class="fas fa-user"></i> Logout

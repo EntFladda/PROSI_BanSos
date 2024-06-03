@@ -60,8 +60,7 @@
         </div>
         <div class="card-body">
             <section>
-                <button class="back">Kembali</button>
-                <form action="/submit" method="post" enctype="multipart/form-data">
+                <form method="POST" action="" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="no_kartu_keluarga">No. Kartu Keluarga</label>
                         <input type="number" id="no_kartu_keluarga" name="no_kartu_keluarga" required>
