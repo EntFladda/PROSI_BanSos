@@ -20,10 +20,12 @@ class CreateDataTable extends Migration
             $table->text('kondisi_rumah');
             $table->integer('jumlah_tanggungan');
             $table->boolean('status')->default(false);
-            $table->timestamps();
+            $table->string('sktm')->nullable();
+            $table->string('slip_gaji')->nullable();
             $table->string('foto_depan')->nullable();
             $table->string('foto_ruang_tamu')->nullable();
             $table->string('foto_dapur')->nullable();
+            $table->timestamps();
         });
     }
 
