@@ -17,6 +17,8 @@ class PengajuanController extends Controller
             'Pekerjaan' => 'required|string|max:150',
             'kondisi_rumah' => 'required|string',
             'jumlah_tanggungan' => 'required|integer',
+            'surat_keterangan_tidak_mampu' => 'required|jpeg,png,jpg|max:2048',
+            'slip_gaji' => 'required|jpeg,png,jpg|max:2048',
             'foto_depan' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'foto_ruang_tamu' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             'foto_dapur' => 'required|image|mimes:jpeg,png,jpg|max:2048',
@@ -32,6 +34,8 @@ class PengajuanController extends Controller
         $data->jumlah_tanggungan = $request->jumlah_tanggungan;
 
         // Simpan foto ke dalam sistem file
+        $data->surat_keteranga_tidak_mampu = $request->file('surat_keterangan_tidak_mampu')->store('public/foto_rumah');
+        $data->slip_gaji = $request->file('slip_gaji')->store('public/foto_rumah');
         $data->foto_depan = $request->file('foto_depan')->store('public/foto_rumah');
         $data->foto_ruang_tamu = $request->file('foto_ruang_tamu')->store('public/foto_rumah');
         $data->foto_dapur = $request->file('foto_dapur')->store('public/foto_rumah');
