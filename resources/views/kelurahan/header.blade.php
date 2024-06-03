@@ -28,9 +28,7 @@
                 <button class="btn btn-navbar" type="submit">
                   <i class="fas fa-search"></i>
                 </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
+                
               </div>
             </div>
           </form>
@@ -47,10 +45,15 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="{{ url('/logout') }}" class="dropdown-item"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             <i class="fas fa-user"></i> Logout
-            <!--<span class="float-right text-muted text-sm">3 mins</span>-->
           </a>
+
+          <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+            @csrf
+          </form>
+
           <!--<div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
             <i class="fas fa-users mr-2"></i> 8 friend requests
@@ -71,9 +74,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
+       
       </li>
     </ul>
   </nav>
