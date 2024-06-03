@@ -93,7 +93,6 @@
                         <div class="mb-3">
                             <select name="role" class="form-select" required>
                                 <option value="">Select Role</option>
-                                <option value="1" {{ old('role') == 1 ? 'selected' : '' }}>Admin</option>
                                 <option value="2" {{ old('role') == 2 ? 'selected' : '' }}>Masyarakat</option>
                                 <option value="3" {{ old('role') == 3 ? 'selected' : '' }}>RT</option>
                                 <option value="4" {{ old('role') == 4 ? 'selected' : '' }}>RW</option>
@@ -111,10 +110,6 @@
                         </div>
                         <div class="mb-3">
                             <input type="password" name="password_confirmation" class="form" placeholder="Confirm Password" required>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
                         </div>
                         <button type="submit" class="button">Register</button>
                     </form>

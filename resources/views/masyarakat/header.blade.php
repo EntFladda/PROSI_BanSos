@@ -48,7 +48,7 @@
           
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <i class="fas fa-user"></i> Logout
+            <button class="fas fa-user" method="POST" action="">Log out</button> 
             <!--<span class="float-right text-muted text-sm">3 mins</span>-->
           </a>
           <!--<div class="dropdown-divider"></div>

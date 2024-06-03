@@ -21,6 +21,9 @@ class CreateDataTable extends Migration
             $table->integer('jumlah_tanggungan');
             $table->boolean('status')->default(false);
             $table->timestamps();
+            $table->string('foto_depan')->nullable();
+            $table->string('foto_ruang_tamu')->nullable();
+            $table->string('foto_dapur')->nullable();
         });
     }
 
