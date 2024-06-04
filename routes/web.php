@@ -68,13 +68,6 @@ Route::get('/laporanpenerimaanrw/detail/{id}', [RWController::class,'laporanpene
 Route::get('/validasi', [RWController::class,'validasi']);
 Route::get('/validasi/detail/{id}', [RWController::class,'validasidetail']);
 Route::delete('/validasi/delete/{id}', [RWController::class,'delete']);
-Route::get('/aras', [RWController::class,'aras']);
-Route::get('/data_kriteria_aras', [RWController::class,'data_kriteria_aras']);
-Route::get('/data_sub_kriteria', [RWController::class,'data_sub_kriteria']);
-Route::get('/data_alternatif', [RWController::class,'data_alternatif']);
-Route::get('/data_penilaian', [RWController::class,'data_penilaian']);
-Route::get('/data_perhitungan', [RWController::class,'data_perhitungan']);
-Route::get('/data_hasil_akhir', [RWController::class,'data_hasil_akhir']);
 Route::get('/lihat_pengajuan_disetujui/{id}', [RWController::class,'validasisetuju']);
 Route::get('/lihat_pengajuan_ditolak/{id}', [RWController::class,'validasitolak']);
 

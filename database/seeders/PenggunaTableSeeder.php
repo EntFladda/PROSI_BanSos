@@ -26,6 +26,26 @@ class PenggunaTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'id_pengguna' => 2,
+                'name' => 'Lisa',
+                'email' => 'lisaaaann@gmail.com',
+                'username' => 'Lisacuy123',
+                'role' => '1',
+                'password' => Hash::make('12345'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'id_pengguna' => 3,
+                'name' => 'Jisoo',
+                'email' => 'jisoooo@gmail.com',
+                'username' => 'Jisooo909',
+                'role' => '1',
+                'password' => Hash::make('12345'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
             ];
             DB::table('pengguna')->insert($data);
     }
