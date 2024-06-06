@@ -33,7 +33,7 @@ class DataTableSeeder extends Seeder
                 'foto_dapur' => 'foto_dapur_' . $i . '.png',
                 'status' => rand(0, 1) == 1,
                 'created_at' => now(),
-                'updated_at' =>now(),
+                'updated_at' => now(),
             ];
         }
         DB::table('data')->insert($data);
