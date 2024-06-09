@@ -19,7 +19,7 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <h3>
+            <h3 style="font-weight: bold font-color: ">
                 Program Bantuan Pangan Non Tunai (BPNT) bagi KPM (Keluarga Penerima Manfaat) PKH yaitu dengan pemberian
                 bantuan sebesar Rp. 200.000- (dua ratus ribu rupiah) yang dapat dipergunakan untuk membeli sembako bukan
                 makanan olahan (seperti nugget,sosis,abon,telur asin, ikan, dll) dan diharapkan menggunakan potensi yang ada
