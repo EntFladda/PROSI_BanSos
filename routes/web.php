@@ -91,5 +91,5 @@ Route::get('/validasik/detail/{id}', [KelurahanController::class,'validasikdetai
 Route::get('/lihat_pengajuan_disetujui/{id}', [KelurahanController::class,'validasiksetuju']);
 Route::get('/lihat_pengajuan_ditolak/{id}', [KelurahanController::class,'validasiktolak']);
 
-
+// Logout
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');

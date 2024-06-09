@@ -162,6 +162,7 @@
                   <button class="btn btn-secondary" onclick="cetakLaporan(3)"><i class="fas fa-solid fa-print"></i>Cetak</button>
                 </td>
               </tr>
+              
             </tbody>
           </table>
           <div class="table-pagination">
