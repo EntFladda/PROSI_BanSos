@@ -88,6 +88,11 @@ Route::get('/lihat_pengajuan_ditolak/{id}', [KelurahanController::class,'validas
 // Logout
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 85803c3c6eee9be2cf36c631d23073a242b32696
 // Define routes for each role's dashboard
 // Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 Route::get('/dashboardm', [MasyarakatController::class, 'dashboardm'])->name('dashboardm');
@@ -107,4 +112,10 @@ Route::post('register', [RegisterController::class, 'register']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 // Handle login
+<<<<<<< HEAD
 Route::post('/login', [LoginController::class, 'login']);
+=======
+Route::post('/login', [LoginController::class, 'login']);
+
+
+>>>>>>> 85803c3c6eee9be2cf36c631d23073a242b32696
