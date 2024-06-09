@@ -30,12 +30,6 @@
               <p>LAPORAN PENGAJUAN</p>
           </a>
       </li>
-      <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
-        <a href="{{ url('/laporanpenerimaan') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
-            <i class="nav-icon fas fa-book-open"></i>
-            <p>LAPORAN PENERIMAAN</p>
-        </a>
-    </li>
         
       </ul>
     </nav>

@@ -158,6 +158,24 @@
                         <label for="foto_dapur">Foto Rumah Tampak Dapur</label>
                         <input type="file" id="foto_dapur" name="foto_dapur" required>
                     </div>
+                    <style>
+                        /* Add your custom styles here */
+                        button[type="submit"] {
+                            background-color: #1b3b40;
+                            color: #ffffff;
+                            border: none;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+                        }
+                    
+                        button[type="submit"]:hover {
+                            background-color: #1b3b40;
+                        }
+                    </style>
+                    
                     <button type="submit">Simpan</button>
                 </form>
             </section>
