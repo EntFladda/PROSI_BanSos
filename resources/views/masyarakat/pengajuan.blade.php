@@ -88,10 +88,19 @@
                         <label for="Pekerjaan">Pekerjaan Sesuai KTP</label>
                         <input type="text" id="Pekerjaan" name="Pekerjaan" required value="{{ old('Pekerjaan') }}">
                     </div>
+                    <style>
+                        /* Apply styles to the textarea */
+                        textarea {
+                            resize: vertical;
+                            min-height: 4rem; /* Set a minimum height to prevent it from becoming too small */
+                        }
+                    </style>
+                    
                     <div class="form-group">
                         <label for="kondisi_rumah">Deskripsi Singkat Tentang Kondisi Ekonomi Anda</label>
                         <textarea id="kondisi_rumah" name="kondisi_rumah" required>{{ old('kondisi_rumah') }}</textarea>
                     </div>
+                    
                     <div class="form-group">
                         <label for="jumlah_tanggungan">Jumlah Tanggungan</label>
                         <select id="jumlah_tanggungan" name="jumlah_tanggungan" required>
@@ -158,7 +167,26 @@
                         <label for="foto_dapur">Foto Rumah Tampak Dapur</label>
                         <input type="file" id="foto_dapur" name="foto_dapur" required>
                     </div>
+                    <style>
+                        /* Add your custom styles here */
+                        button[type="submit"] {
+                            background-color: #1b3b40;
+                            color: #ffffff;
+                            border: none;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+                        }
+                    
+                        button[type="submit"]:hover {
+                            background-color: #1b3b40;
+                        }
+                    </style>
+                    
                     <button type="submit">Simpan</button>
+                    
                 </form>
             </section>
         </div>
