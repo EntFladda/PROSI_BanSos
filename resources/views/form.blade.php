@@ -1,4 +1,4 @@
-@extends('rt.template')
+
 
 @section('content')
     <style>

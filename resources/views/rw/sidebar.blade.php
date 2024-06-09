@@ -17,12 +17,7 @@
                 </a>
             </li>
 
-            <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-                <a href="{{ url('/aras') }}" class="nav-link">
-                    <i class="nav-icon fas fa-filter"></i>
-                    <p>METODE ARAS</p>
-                </a>
-            </li>
+           
             <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
                 <a href="{{ url('/datapengajuan') }}" class="nav-link">
                     <i class="nav-icon fas fa-layer-group"></i>
