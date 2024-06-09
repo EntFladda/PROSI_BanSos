@@ -85,19 +85,19 @@
                         <label for="jumlah_tanggungan">Jumlah Tanggungan</label>
                         <select id="jumlah_tanggungan" name="jumlah_tanggungan" required>
                             <option value="">Pilih Opsi</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                            <option value="">6</option>
-                            <option value="">7</option>
-                            <option value="">8</option>
-                            <option value="">9</option>
-                            <option value="">10</option>
-                            <option value="">11</option>
-                            <option value="">12</option>
-                            <option value="">>12</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">>12</option>
 
                         </select>
                     </div>
@@ -105,9 +105,9 @@
                         <label for="penghasilan">Penghasilan</label>
                         <select id="penghasilan" name="penghasilan" required>
                             <option value="">Pilih Opsi</option>
-                            <option value="">0-1.000.000</option>
-                            <option value="">1.000.000-2.500.000</option>
-                            <option value="">>2.500.000</option>
+                            <option value="1">0-1.000.000</option>
+                            <option value="2">1.000.000-2.500.000</option>
+                            <option value="3">>2.500.000</option>
                             <!-- Add options here -->
                         </select>
                     </div>
@@ -115,8 +115,8 @@
                         <label for="bansos_sebelumnya">Apakah Pernah menerima Bansos Sebelumnya</label>
                         <select id="bansos_sebelumnya" name="bansos_sebelumnya" required>
                             <option value="">Pilih Opsi</option>
-                            <option value="">Ya</option>
-                            <option value="">Tidak</option>
+                            <option value="1">Ya</option>
+                            <option value="2">Tidak</option>
                             <!-- Add options here -->
                         </select>
                     </div>
@@ -124,10 +124,10 @@
                         <label for="jenis_bansos">Jenis Bansos yang ingin diajukan</label>
                         <select id="jenis_bansos" name="jenis_bansos" required>
                             <option value="">Pilih Opsi</option>
-                            <option value="">BPNT</option>
-                            <option value="">PKH</option>
-                            <option value="">BLT</option>
-                            <option value="">BSB</option>
+                            <option value="1">BPNT</option>
+                            <option value="2">PKH</option>
+                            <option value="3">BLT</option>
+                            <option value="4">BSB</option>
                             <!-- Add options here -->
                         </select>
                     </div>

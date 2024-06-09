@@ -32,6 +32,23 @@
             margin-top: 0.3rem;
             transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         }
+        .register-button {
+            display: inline-block;
+            width: 100%;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            background-color: #4dceeb;
+            border: 1px solid transparent;
+            padding: .575rem 1.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-top: 0.3rem;
+            border-radius: .55rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
         .form {
             display: block;
             width: 100%;
@@ -112,6 +129,7 @@
                             <input type="password" name="password_confirmation" class="form" placeholder="Confirm Password" required>
                         </div>
                         <button type="submit" class="button">Register</button>
+                        <a href="{{ route('login') }}" class="register-button" style="text-decoration: none; color:#ffffff;">Login</a>
                     </form>
                 </div>
             </div>
