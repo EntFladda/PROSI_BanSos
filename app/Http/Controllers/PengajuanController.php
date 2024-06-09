@@ -13,7 +13,7 @@ class PengajuanController extends Controller
         {
             $request->validate([
                 'no_KK' => 'required|string|max:16',
-                'no_tlp' => 'required|string|max:20',
+                'no_tlp' => 'required|string|max:15',
                 'nama' => 'required|string',
                 'penghasilan' => 'required|integer',
                 'Pekerjaan' => 'required|string|max:150',
