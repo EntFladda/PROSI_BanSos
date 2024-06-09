@@ -18,6 +18,7 @@ class Jenis_BansosSeeder extends Seeder
 
             [
                 'id_jb' => 1,
+                'name' => 'BPNT',
                 'deskripsi' => 'Bantuan Pangan Non Tunai (BPNT) yaitu dengan pemberian
                 bantuan sebesar Rp. 200.000- (dua ratus ribu rupiah) yang dapat dipergunakan untuk membeli sembako bukan
                 makanan olahan (seperti nugget,sosis,abon,telur asin, ikan, dll) dan diharapkan menggunakan potensi yang ada
@@ -27,6 +28,7 @@ class Jenis_BansosSeeder extends Seeder
             ],
             [
                 'id_jb' => 2,
+                'name' => 'PKH',
                 'deskripsi' => 'Program Keluarga Harapan (PKH) adalah program bantuan sosial 
                 bersyarat yang dikelola oleh Kementerian Sosial Republik Indonesia. 
                 Program ini bertujuan untuk meningkatkan kualitas hidup keluarga miskin 
@@ -39,6 +41,7 @@ class Jenis_BansosSeeder extends Seeder
             ],
             [
                 'id_jb' => 3,
+                'name' => 'BLT',
                 'deskripsi' => 'Bantuan Langsung Tunai (BLT) adalah program bantuan sosial dari pemerintah 
                 Indonesia yang bertujuan untuk memberikan bantuan finansial langsung kepada 
                 masyarakat miskin dan rentan, terutama dalam situasi darurat atau ketika 
@@ -50,6 +53,7 @@ class Jenis_BansosSeeder extends Seeder
             ],
             [
                 'id_jb' => 4,
+                'name' => 'BSB',
                 'deskripsi' => 'Bantuan Sosial Beras adalah program bantuan sosial yang diluncurkan 
                 oleh pemerintah Indonesia untuk membantu keluarga miskin dan rentan dalam 
                 memenuhi kebutuhan pangan mereka, khususnya beras sebagai bahan pokok utama. 

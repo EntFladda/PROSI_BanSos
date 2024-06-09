@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JenisBansosController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\PengajuanController;
@@ -117,3 +118,5 @@ Route::get('/datapengajuan', 'PengajuanController@index');
 Route::get('/datapengajuan', [PengajuanController::class, 'index']);
 
 Route::get('/datapengajuan/detail/{id}', [PengajuanController::class, 'datapengajuandetail'])->name('datapengajuan.detail');
+
+Route::get('/informasi/detail/{id}', [JenisBansosController::class, 'show']);

@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Data;
+
 class MasyarakatController extends Controller
 {
     public function index()
@@ -41,8 +43,9 @@ class MasyarakatController extends Controller
         ];
 
         $activeMenu = 'konfirmasi';
+        $datapengajuan = Data::all();
 
-        return view('masyarakat.konfirmasi', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('masyarakat.konfirmasi', ['datapengajuan' => $datapengajuan, 'breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function pengajuanm(){
         $breadcrumb = (object) [
