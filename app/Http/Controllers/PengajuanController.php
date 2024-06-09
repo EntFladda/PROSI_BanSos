@@ -64,4 +64,15 @@ class PengajuanController extends Controller
             $datapengajuan = Data::all();
             return view('rw.datapengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu, 'datapengajuan' => $datapengajuan]);
         }
+        public function datapengajuandetail($id)
+        {
+            $breadcrumb = (object) [
+                'title' => '',
+                'list' => ['Pengajuan', 'Welcome']
+            ];
+    
+            $activeMenu = 'datapengajuan';
+            $pengajuan = Data::findOrFail($id); // Ambil data pengajuan berdasarkan ID
+            return view('datapengajuan.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu, 'pengajuan' => $pengajuan]);
+        }
     }
