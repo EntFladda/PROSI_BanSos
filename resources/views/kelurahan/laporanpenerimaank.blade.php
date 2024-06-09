@@ -137,7 +137,6 @@
                         <th>No Kartu Keluarga</th>
                         <th>Jenis Bansos</th>
                         <th>Status</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -146,19 +145,16 @@
                         <td>Lisa</td>
                         <td>0100100001001010</td>
                         <td>BLT</td>
-                        <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
                         <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <button class="btn btn-secondary" onclick="cetakLaporan(1)"><i class="fas fa-solid fa-print"></i>Cetak</button>
                         </td>
+                
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Rose</td>
                         <td>0100100001001010</td>
                         <td>PKH</td>
-                        <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
                         <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <button class="btn btn-secondary" onclick="cetakLaporan(2)"><i class="fas fa-solid fa-print"></i>Cetak</button>
                         </td>
                     </tr>
                     <tr>
@@ -166,10 +162,9 @@
                         <td>Jisoo</td>
                         <td>0100100001001010</td>
                         <td>BPNT</td>
-                        <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
                         <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <button class="btn btn-secondary" onclick="cetakLaporan(3)"><i class="fas fa-solid fa-print"></i>Cetak</button>
                         </td>
+                        
                     </tr>
                 </tbody>
             </table>
