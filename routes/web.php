@@ -87,8 +87,8 @@ Route::get('/lihat_pengajuan_ditolak/{id}', [KelurahanController::class,'validas
 // Logout
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-<<<<<<< Updated upstream
-=======
+
+
 // Define routes for each role's dashboard
 // Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 Route::get('/dashboardm', [MasyarakatController::class, 'dashboardm'])->name('dashboardm');
@@ -110,4 +110,4 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 // Handle login
 Route::post('/login', [LoginController::class, 'login']);
 
->>>>>>> Stashed changes
+
