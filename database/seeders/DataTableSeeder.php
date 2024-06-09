@@ -14,6 +14,31 @@ class DataTableSeeder extends Seeder
      */
     public function run(): void
     {
+<<<<<<< HEAD
+        $data = [
+            [
+                'id_login' => 1,
+                'nama' => 'Jennie',
+                'no_KK' => '1234567890123456',
+                'no_tlp' => '081234567890',
+                'penghasilan' => 5000000,
+                'Pekerjaan' => 'Software Engineer',
+                'kondisi_rumah' => 'Layak huni',
+                'jumlah_tanggungan' => 3,
+                'sktm' => 'sktm_1.png',
+                'slip_gaji' => 'slip_gaji_1.png',
+                'foto_depan' => 'foto_depan_1.png',
+                'foto_ruang_tamu' => 'foto_ruang_tamu_1.png',
+                'foto_dapur' => 'foto_dapur_1.png',
+                'status' => true,
+                'created_at' => now(),
+                'updated_at' => now(),
+                ]
+            ];
+        DB::table('data')->insert($data);
+    }
+}
+=======
         $data = [];
 
         for ($i = 1; $i <= 50; $i++) {
@@ -39,3 +64,4 @@ class DataTableSeeder extends Seeder
         DB::table('data')->insert($data);
     }
 }
+>>>>>>> aa23f8af152faf4ef913c281348172df406f0392

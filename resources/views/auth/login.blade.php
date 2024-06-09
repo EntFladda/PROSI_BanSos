@@ -36,7 +36,7 @@
             display: inline-block;
             width: 100%;
             font-weight: 700;
-            color: #000000;
+            color: #ffffff;
             text-align: center;
             vertical-align: middle;
             user-select: none;

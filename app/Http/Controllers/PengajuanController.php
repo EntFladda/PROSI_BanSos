@@ -24,23 +24,7 @@ class PengajuanController extends Controller
             'foto_dapur' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
-        $data = new Data;
-        $data->nama = $request->nama;
-        $data->no_KK = $request->no_KK;
-        $data->no_tlp = $request->no_tlp;
-        $data->penghasilan = $request->penghasilan;
-        $data->Pekerjaan = $request->Pekerjaan;
-        $data->kondisi_rumah = $request->kondisi_rumah;
-        $data->jumlah_tanggungan = $request->jumlah_tanggungan;
 
-        // Simpan foto ke dalam sistem file
-        $data->surat_keteranga_tidak_mampu = $request->file('surat_keterangan_tidak_mampu')->store('public/foto_rumah');
-        $data->slip_gaji = $request->file('slip_gaji')->store('public/foto_rumah');
-        $data->foto_depan = $request->file('foto_depan')->store('public/foto_rumah');
-        $data->foto_ruang_tamu = $request->file('foto_ruang_tamu')->store('public/foto_rumah');
-        $data->foto_dapur = $request->file('foto_dapur')->store('public/foto_rumah');
-
-        $data->save();
 
         return redirect()->back()->with('success', 'Data berhasil disimpan.');
     }
