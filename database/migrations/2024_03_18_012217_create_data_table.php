@@ -10,8 +10,6 @@ class CreateDataTable extends Migration
     {
         Schema::create('data', function (Blueprint $table) {
             $table->increments('id_data');
-            $table->unsignedInteger('id_login');
-            $table->foreign('id_login')->references('id_pengguna')->on('pengguna');
             $table->string('nama');
             $table->string('no_KK', 50);
             $table->string('no_tlp', 20);

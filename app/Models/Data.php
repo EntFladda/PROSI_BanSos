@@ -18,6 +18,8 @@ class Data extends Model
         'kondisi_rumah',
         'jumlah_tanggungan',
         'status',
+        'sktm',
+        'slip_gaji',
         'foto_depan',
         'foto_ruang_tamu',
         'foto_dapur',
