@@ -99,18 +99,8 @@
         <div class="card-tools"></div>
     </div>
     <div class="card-body">
-        <div class="table-controls">
-            <label for="entries-per-page">Show:</label>
-            <select id="entries-per-page">
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-            </select> entries
-
-            <input type="text" id="search-input" placeholder="Search...">
-        </div>
-
+        <!-- Table controls and search input -->
+        
         <table class="data-table">
             <thead>
                 <tr>
@@ -123,159 +113,22 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($datapengajuan as $index => $pengajuan)
                 <tr>
-                    <td>1</td>
-                    <td>Lisa</td>
-                    <td>0100100001001010</td>
-                    <td>Petani</td>
-                    <td>11-04-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $pengajuan->nama }}</td>
+                    <td>{{ $pengajuan->no_KK }}</td>
+                    <td>{{ $pengajuan->Pekerjaan }}</td>
+                    <td>{{ $pengajuan->created_at->format('d-m-Y') }}</td>
+                    <td><a href="{{ url('/datapengajuan/detail/' . $pengajuan->id_data) }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Rose</td>
-                    <td>0100100001001010</td>
-                    <td>Wiraswasta</td>
-                    <td>12-09-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Jisoo</td>
-                    <td>0100100001001010</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>26-05-2024</td>
-                    <td><a href="{{ url('/datapengajuan/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a></td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
-        <script>
-            function handlePaginationClick(event) {
-              event.preventDefault(); // Prevent default link behavior
-            
-              const clickedButton = event.target;
-              let currentPage = parseInt(document.getElementById('current-page').value); // Assuming a hidden field stores current page
-            
-              if (clickedButton.classList.contains('prev')) {
-                currentPage--;
-              } else if (clickedButton.classList.contains('next')) {
-                currentPage++;
-              }
-            
-              // Make asynchronous request to server with updated page number
-              fetch(`/datapengajuan?page=${currentPage}`)
-                .then(response => response.json())
-                .then(data => {
-                  // Update table content with new data (manipulate DOM here)
-                  updateTableContent(data);
-            
-                  // Update pagination links (adjust href attributes)
-                  updatePaginationLinks(currentPage);
-                });
-            }
-            
-            function updateTableContent(data) {
-              // Replace existing table body content with new data
-              const tableBody = document.querySelector('.data-table tbody');
-              tableBody.innerHTML = ''; // Clear existing content
-            
-              // Loop through data and create table rows
-              for (const rowData of data) {
-                // ... create table row elements and populate with data
-              }
-            }
-            
-            function updatePaginationLinks(currentPage) {
-              const prevLink = document.querySelector('.pagination-links .prev');
-              const nextLink = document.querySelector('.pagination-links .next');
-            
-              prevLink.href = `/datapengajuan?page=${currentPage - 1}`;
-              nextLink.href = `/datapengajuan?page=${currentPage + 1}`;
-            }
-            
-            // Attach event listeners to pagination buttons
-            document.querySelectorAll('.pagination-links a').forEach(link => {
-              link.addEventListener('click', handlePaginationClick);
-            });
-            </script>
+        
+        <!-- Pagination links -->
         <div class="table-pagination">
-            <div class="pagination-info">Showing 1 to 1 of 1 entries</div>
-            <div class="pagination-links">
-                <a href="/datapengajuan?page=${currentPage - 1}" class="pagination-link prev">Previous</a>
-                <a href="/datapengajuan?page=${currentPage + 1}" class="pagination-link next">Next</a>
-            </div>
+            <!-- You can customize pagination links using the provided JavaScript functions -->
         </div>
     </div>
 </div>

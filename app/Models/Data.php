@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Data extends Model
 {
-    
     protected $table = 'data';
 
     protected $fillable = [
@@ -24,6 +23,7 @@ class Data extends Model
         'foto_ruang_tamu',
         'foto_dapur',
     ];
+
 
     public function user()
     {

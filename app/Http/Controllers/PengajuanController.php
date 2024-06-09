@@ -50,7 +50,18 @@ class PengajuanController extends Controller
                 'foto_ruang_tamu' => $fotoRuangTamuPath,
                 'foto_dapur' => $fotoDapurPath,
             ]);
-
+            
             return redirect()->back()->with('success', 'Data berhasil disimpan.');
+        }
+        public function index()
+        {
+            $breadcrumb = (object) [
+                'title' => '',
+                'list' => ['Pengajuan', 'Welcome']
+            ];
+    
+            $activeMenu = 'datapengajuan';
+            $datapengajuan = Data::all();
+            return view('rw.datapengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu, 'datapengajuan' => $datapengajuan]);
         }
     }
