@@ -62,7 +62,6 @@
                     <td>{{ $jenisBansos->name }}</td>
                     <td>{{ $jenisBansos->deskripsi}}</td>
                 </tr>
-                <!-- You can add more rows here if needed -->
             </table>
         </div>
     </div>
