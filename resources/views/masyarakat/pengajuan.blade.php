@@ -88,10 +88,19 @@
                         <label for="Pekerjaan">Pekerjaan Sesuai KTP</label>
                         <input type="text" id="Pekerjaan" name="Pekerjaan" required value="{{ old('Pekerjaan') }}">
                     </div>
+                    <style>
+                        /* Apply styles to the textarea */
+                        textarea {
+                            resize: vertical;
+                            min-height: 4rem; /* Set a minimum height to prevent it from becoming too small */
+                        }
+                    </style>
+                    
                     <div class="form-group">
                         <label for="kondisi_rumah">Deskripsi Singkat Tentang Kondisi Ekonomi Anda</label>
                         <textarea id="kondisi_rumah" name="kondisi_rumah" required>{{ old('kondisi_rumah') }}</textarea>
                     </div>
+                    
                     <div class="form-group">
                         <label for="jumlah_tanggungan">Jumlah Tanggungan</label>
                         <select id="jumlah_tanggungan" name="jumlah_tanggungan" required>
