@@ -21,7 +21,7 @@
             <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
                 <a href="{{ url('/datapengajuan') }}" class="nav-link">
                     <i class="nav-icon fas fa-layer-group"></i>
-                    <p>PENGAJUAN</p>
+                    <p>LAPORAN PENGAJUAN</p>
                 </a>
             </li>
             <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
@@ -31,12 +31,7 @@
                 </a>
             </li>
 
-            <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
-                <a href="{{ url('/laporanpengajuanrw') }}" class="nav-link ">
-                    <i class="nav-icon far fa-bookmark"></i>
-                    <p>LAPORAN PENGAJUAN</p>
-                </a>
-            </li>
+            
             <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
                 <a href="{{ url('/laporanpenerimaanrw') }}" class="nav-link ">
                     <i class="nav-icon fas fa-book"></i>

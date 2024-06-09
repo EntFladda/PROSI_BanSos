@@ -46,6 +46,9 @@ Route::post('register', [RegisterController::class, 'register']);
 // Masyarakat
 Route::get('/informasi', [MasyarakatController::class,'informasi']);
 Route::get('/informasi/detail/{id}', [MasyarakatController::class,'informasidetail']);
+Route::get('/informasi2/detail/{id}', [MasyarakatController::class,'informasidetail2']);
+Route::get('/informasi3/detail/{id}', [MasyarakatController::class,'informasidetail3']);
+Route::get('/informasi4/detail/{id}', [MasyarakatController::class,'informasidetail4']);
 Route::get('/konfirmasi', [MasyarakatController::class,'konfirmasi']);
 Route::get('/konfirmasi/detail/{id}', [MasyarakatController::class,'konfirmasidetail']);
 Route::get('/pengajuanm', [MasyarakatController::class,'pengajuanm']);
