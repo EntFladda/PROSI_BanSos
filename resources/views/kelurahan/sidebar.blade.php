@@ -24,13 +24,6 @@
           </a>
         </li>
 
-        <li class="nav-item"style="background-color: #1b3b40;border-radius:10px;margin:5px">
-          <a href="{{ url('/validasik') }}" class="nav-link {{ ($activeMenu == 'level')? 'active' : '' }} ">
-            <i class="nav-icon fas fa-paper-plane"></i>
-            <p>VALIDASI</p>
-          </a>
-        </li>
-
         <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
           <a href="{{ url('/laporanpenerimaank') }}" class="nav-link {{ ($activeMenu == 'kategori')? 'active' : '' }} ">
               <i class="nav-icon far fa-bookmark"></i>
