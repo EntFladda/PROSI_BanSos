@@ -87,5 +87,3 @@ Route::get('/lihat_pengajuan_ditolak/{id}', [KelurahanController::class,'validas
 // Logout
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-
-
