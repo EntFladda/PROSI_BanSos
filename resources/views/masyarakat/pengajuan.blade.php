@@ -78,7 +78,7 @@
                     </div>
                     <div class="form-group">
                         <label for="no_tlp">No. Telepon</label>
-                        <input type="text" id="no_tlp" name="no_tlp" maxlength="20" required value="{{ old('no_tlp') }}">
+                        <input type="text" id="no_tlp" name="no_tlp" maxlength="15" required value="{{ old('no_tlp') }}">
                     </div>
                     <div class="form-group">
                         <label for="nama">Nama Lengkap</label>
