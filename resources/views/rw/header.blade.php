@@ -28,9 +28,7 @@
                 <button class="btn btn-navbar" type="submit">
                   <i class="fas fa-search"></i>
                 </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
+                
               </div>
             </div>
           </form>
@@ -75,9 +73,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
+        
       </li>
     </ul>
   </nav>
