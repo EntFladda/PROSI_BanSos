@@ -1,5 +1,5 @@
 
-
+@extends('rt.template')
 @section('content')
     <style>
         .container {
@@ -10,8 +10,6 @@
             max-width: 800px;
             margin: auto;
         }
-
-
         button.back {
             background-color: #333;
             color: white;

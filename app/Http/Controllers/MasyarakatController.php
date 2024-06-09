@@ -52,7 +52,7 @@ class MasyarakatController extends Controller
 
         $activeMenu = 'pengajuanm';
 
-        return view('masyarakat.pengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('form', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
     }
     public function informasidetail(){
         $breadcrumb = (object) [
