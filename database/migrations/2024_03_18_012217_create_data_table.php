@@ -17,6 +17,7 @@ class CreateDataTable extends Migration
             $table->string('Pekerjaan', 150);
             $table->text('kondisi_rumah');
             $table->integer('jumlah_tanggungan');
+            $table->integer('jenis_bansos');
             $table->boolean('status')->default(false);
             $table->string('sktm')->nullable();
             $table->string('slip_gaji')->nullable();

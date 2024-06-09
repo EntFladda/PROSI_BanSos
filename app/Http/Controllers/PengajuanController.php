@@ -19,11 +19,13 @@ class PengajuanController extends Controller
                 'Pekerjaan' => 'required|string|max:150',
                 'kondisi_rumah' => 'required|string',
                 'jumlah_tanggungan' => 'required|integer',
+                'jenis_bansos' => 'required|integer',
                 'surat_keterangan_tidak_mampu' => 'required|mimes:jpeg,png,jpg|max:2048',
                 'slip_gaji' => 'required|mimes:jpeg,png,jpg|max:2048',
                 'foto_depan' => 'required|image|mimes:jpeg,png,jpg|max:2048',
                 'foto_ruang_tamu' => 'required|image|mimes:jpeg,png,jpg|max:2048',
                 'foto_dapur' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+                
             ]);
 
             // Assuming you are using auth to get the logged-in user id
@@ -35,6 +37,7 @@ class PengajuanController extends Controller
             $fotoRuangTamuPath = $request->file('foto_ruang_tamu')->store('images');
             $fotoDapurPath = $request->file('foto_dapur')->store('images');
 
+
             // Menyimpan data ke database
             Data::create([
                 'nama' => $request->nama,
@@ -44,6 +47,7 @@ class PengajuanController extends Controller
                 'Pekerjaan' => $request->Pekerjaan,
                 'kondisi_rumah' => $request->kondisi_rumah,
                 'jumlah_tanggungan' => $request->jumlah_tanggungan,
+                'jenis_bansos' => $request->jenis_bansos,
                 'sktm' => $sktmPath,
                 'slip_gaji' => $slipGajiPath,
                 'foto_depan' => $fotoDepanPath,
@@ -62,6 +66,7 @@ class PengajuanController extends Controller
     
             $activeMenu = 'datapengajuan';
             $datapengajuan = Data::all();
+            $datapengajuan = Data::with('jenisBansos')->get();
             return view('rw.datapengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu, 'datapengajuan' => $datapengajuan]);
         }
         public function datapengajuandetail($id)
@@ -75,4 +80,5 @@ class PengajuanController extends Controller
             $pengajuan = Data::findOrFail($id); // Ambil data pengajuan berdasarkan ID
             return view('datapengajuan.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu, 'pengajuan' => $pengajuan]);
         }
+        
     }

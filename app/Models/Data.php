@@ -17,6 +17,7 @@ class Data extends Model
         'Pekerjaan',
         'kondisi_rumah',
         'jumlah_tanggungan',
+        'jenis_bansos',
         'status',
         'sktm',
         'slip_gaji',
@@ -29,5 +30,10 @@ class Data extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'id_login', 'id_pengguna');
+    }
+
+    public function jenisBansos()
+    {
+        return $this->belongsTo(JenisBansos::class, 'jenis_bansos', 'id_jb');
     }
 }

@@ -10,6 +10,7 @@ class CreateJenisBansosTable extends Migration
     {
         Schema::create('jenis_bansos', function (Blueprint $table) {
             $table->increments('id_jb');
+            $table->string('name');
             $table->string('deskripsi', 1000);
             $table->timestamps();
         });
