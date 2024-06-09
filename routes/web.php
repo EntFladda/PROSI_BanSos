@@ -112,3 +112,8 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 // Handle login
 
 Route::post('/login', [LoginController::class, 'login']);
+
+Route::get('/datapengajuan', 'PengajuanController@index');
+Route::get('/datapengajuan', [PengajuanController::class, 'index']);
+
+Route::get('/datapengajuan/detail/{id}', [PengajuanController::class, 'datapengajuandetail'])->name('datapengajuan.detail');
