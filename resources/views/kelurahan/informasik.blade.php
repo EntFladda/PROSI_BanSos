@@ -89,6 +89,13 @@
             <div class="info-button">
                 <button>+Tambah Informasi</button>
             </div>
+            <style>
+                /* Adjust the width of the "Number (No)" column */
+                th:first-child,
+                td:first-child {
+                    width: 10rem;   
+                }
+            </style>
             <table style="width: 100%;border-collapse: collapse;margin-top: 20px;border: 1px solid #bdc3c7;">
                 <tr>
                     <th style="text-align: center;">No</th>

@@ -1,20 +1,22 @@
 @extends('masyarakat.template')
 
 @section('content')
-
-<div class="card">
-    <div class="card-header">
-
-        <div class="card-tools"></div>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-tools"></div>
+        </div>
+        <div class="card-body">
+            <div class="info-box-container" style="display: flex;gap:50px;align-items: center; justify-content: center;">
+                <div class="info-box" style="background-color: #1b3b40; border-radius: 10px;width: 300px; height: 150px;">
+                    <span class="info-box-icon"><i class="fas fa-cloud-download-alt" style="color: #d6d0d0"></i></span>
+                <a href="/pengajuanm">
+                    <div class="info-box-content" style="color: #d6d0d0">
+                        <span class="info-box-text" style="font-size: 18px;font-weight:bold;text-align:center">Form Pengajuan
+                            Bansos</span>
+                        <span class="info-box-number" style="font-size: 18px;font-weight:bold;text-align:center">89</span>
+                    </div>
+                </a>
+                </div>
     </div>
-    <div class="card-body">
-        <section class="description" style="background-color: #ecf0f1;padding: 20px;border-radius: 8px;">
-            <h2 style="background-color: #1b3b40;color: white;padding: 10px;margin: 0 -20px 20px -20px;
-            border-top-left-radius: 8px;border-top-right-radius: 8px;">Deskripsi</h2>
-            <div class="info-box" style="background-color: white;padding: 20px;border: 1px solid #bdc3c7; border-radius: 8px;
-            display: grid;grid-template-columns: auto 1fr;grid-row-gap: 10px;align-items: center;">
-            </div>
-        </section>
-    </div>
-</div>
 @endsection
+
