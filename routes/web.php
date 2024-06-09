@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\MasyarakatController;
+use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\RTController;
 use App\Http\Controllers\RWController;
 use App\Http\Controllers\WelcomeController;
@@ -49,7 +50,7 @@ Route::get('/konfirmasi', [MasyarakatController::class,'konfirmasi']);
 Route::get('/konfirmasi/detail/{id}', [MasyarakatController::class,'konfirmasidetail']);
 Route::get('/pengajuanm', [MasyarakatController::class,'pengajuanm']);
 // Rute untuk menyimpan data formulir
-Route::post('/submit', [PengajuanController::class, 'store']);
+Route::post('/pengajuan-bantuan-sosial', [PengajuanController::class, 'store'])->name('pengajuan.store');
 
 // RT
 Route::get('/pengajuanrt', [RTController::class,'pengajuanrt']);
@@ -87,8 +88,6 @@ Route::get('/lihat_pengajuan_ditolak/{id}', [KelurahanController::class,'validas
 // Logout
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-
-
 // Define routes for each role's dashboard
 // Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 Route::get('/dashboardm', [MasyarakatController::class, 'dashboardm'])->name('dashboardm');
@@ -108,6 +107,5 @@ Route::post('register', [RegisterController::class, 'register']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 // Handle login
+
 Route::post('/login', [LoginController::class, 'login']);
-
-

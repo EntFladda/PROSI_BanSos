@@ -14,7 +14,7 @@ class DataTableSeeder extends Seeder
      */
     public function run(): void
     {
-<<<<<<< HEAD
+
         $data = [
             [
                 'id_login' => 1,
@@ -38,7 +38,7 @@ class DataTableSeeder extends Seeder
         DB::table('data')->insert($data);
     }
 }
-=======
+
         $data = [];
 
         for ($i = 1; $i <= 50; $i++) {
@@ -62,6 +62,3 @@ class DataTableSeeder extends Seeder
             ];
         }
         DB::table('data')->insert($data);
-    }
-}
->>>>>>> aa23f8af152faf4ef913c281348172df406f0392
