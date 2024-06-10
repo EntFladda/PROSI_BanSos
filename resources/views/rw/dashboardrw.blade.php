@@ -29,4 +29,10 @@
             </div>
         </div>
     </div>
+    <div class="card-body" style="display: flex; justify-content: center; align-items: center;">
+        <iframe width="800" height="450"
+            src="https://lookerstudio.google.com/embed/reporting/c5ffc4ce-5796-43c4-83d1-666e6f4a398b/page/YMd2D"
+            frameborder="0" style="border:0" allowfullscreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    </div>
 @endsection
