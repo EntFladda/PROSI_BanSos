@@ -18,7 +18,7 @@ class CreateDataTable extends Migration
             $table->text('kondisi_rumah');
             $table->integer('jumlah_tanggungan');
             $table->integer('jenis_bansos');
-            $table->boolean('status')->default(false);
+            $table->boolean('status')->nullable();
             $table->string('sktm')->nullable();
             $table->string('slip_gaji')->nullable();
             $table->string('foto_depan')->nullable();

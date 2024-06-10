@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Data;
+
 class KelurahanController extends Controller
 {
     public function index()
@@ -55,8 +57,9 @@ class KelurahanController extends Controller
         ];
 
         $activeMenu = 'laporanpenerimaank';
+        $datapengajuan = Data::all();
 
-        return view('kelurahan.laporanpenerimaank', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+        return view('kelurahan.laporanpenerimaank', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu, 'datapengajuan' => $datapengajuan]);
     }
     public function validasik(){
         $breadcrumb = (object) [

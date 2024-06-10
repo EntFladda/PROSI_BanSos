@@ -11,8 +11,8 @@ class CreateLaporanTable extends Migration
         Schema::create('laporan', function (Blueprint $table) {
             $table->increments('id_laporan');
             $table->unsignedInteger('id_data');
-            $table->foreign('id_data')->references('id_data')->on('data');
-            $table->text('Keterangan');
+            $table->foreign('id_data')->references('id_data')->on('data')->onDelete('cascade');
+            $table->string('gambar')->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();
         });

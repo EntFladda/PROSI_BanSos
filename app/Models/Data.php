@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\StatusUpdated;
 use Illuminate\Database\Eloquent\Model;
 
 class Data extends Model
@@ -10,6 +11,7 @@ class Data extends Model
     protected $table = 'data';
 
     protected $fillable = [
+        'id_data',
         'nama',
         'no_KK',
         'no_tlp',
@@ -26,7 +28,6 @@ class Data extends Model
         'foto_dapur',
     ];
 
-
     public function user()
     {
         return $this->belongsTo(User::class, 'id_login', 'id_pengguna');
@@ -35,5 +36,19 @@ class Data extends Model
     public function jenisBansos()
     {
         return $this->belongsTo(JenisBansos::class, 'jenis_bansos', 'id_jb');
+    }
+    public function laporan()
+    {
+        return $this->hasMany(Laporan::class, 'id_data', 'id_data');
+    }
+    public function konfirmasiBansos($id) {
+        $data = Data::find($id);
+        if($data) {
+            $data->status = true; // Assuming 'status' is a boolean field
+            $data->save();
+            return response()->json(['success' => true]);
+        } else {
+            return response()->json(['success' => false]);
+        }
     }
 }

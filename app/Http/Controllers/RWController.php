@@ -1,5 +1,7 @@
 <?php
 namespace App\Http\Controllers;
+
+use App\Models\Data;
 use App\Models\Entry;
 
 class RWController extends Controller
@@ -210,5 +212,14 @@ class RWController extends Controller
         $activeMenu = 'validasitolak';
 
         return view('rw.validasiktolak.show', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu]);
+    }
+    public function showValidationForm()
+    {
+        $breadcrumb = (object) [
+            'title' => '',
+            'list' => ['Detail Validasi', 'Welcome']
+        ];
+        $dataPengajuan = Data::all();
+        return view('rw.validasi', ['breadcrumb' => $breadcrumb, 'dataPengajuan'=> $dataPengajuan]);
     }
 }

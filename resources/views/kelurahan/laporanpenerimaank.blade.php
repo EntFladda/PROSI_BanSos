@@ -137,41 +137,26 @@
                         <th>No Kartu Keluarga</th>
                         <th>Jenis Bansos</th>
                         <th>Status</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Lisa</td>
-                        <td>0100100001001010</td>
-                        <td>BLT</td>
-                        <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <button class="btn btn-secondary" onclick="cetakLaporan(1)"><i class="fas fa-solid fa-print"></i>Cetak</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Rose</td>
-                        <td>0100100001001010</td>
-                        <td>PKH</td>
-                        <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <button class="btn btn-secondary" onclick="cetakLaporan(2)"><i class="fas fa-solid fa-print"></i>Cetak</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Jisoo</td>
-                        <td>0100100001001010</td>
-                        <td>BPNT</td>
-                        <td><a href="/konfirmasi_bansos" class="btn-confirm">Konfirmasi Penerimaan Bansos</a></td>
-                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
-                            <button class="btn btn-secondary" onclick="cetakLaporan(3)"><i class="fas fa-solid fa-print"></i>Cetak</button>
-                        </td>
-                    </tr>
-                </tbody>
+                    @foreach($datapengajuan as $pengajuan)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $pengajuan->nama }}</td>
+                    <td>{{ $pengajuan->no_KK }}</td>
+                    <td>{{ $pengajuan->jenisBansos->name }}</td>
+                    <td style="text-align: center;">
+                        @if($pengajuan->status === 1)
+                        <span class="btn-success">Disetujui</span>
+                        @elseif($pengajuan->status === 0)
+                        <span class="btn-delete">Ditolak</span>
+                        @elseif($pengajuan->status === null)
+                        <span class="btn-secondary">Pending</span>
+                        @endif
+                    </td>
+                </tr>
+                @endforeach
             </table>
             <div class="table-pagination">
                 <div class="pagination-info">Showing 1 to 1 of 1 entries</div>

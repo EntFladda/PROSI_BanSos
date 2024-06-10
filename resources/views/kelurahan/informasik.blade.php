@@ -42,43 +42,6 @@
         .btn i {
             margin-right: 5px;
         }
-
-        .info-button {
-            margin-top: 20px;
-            text-align: right;
-        }
-
-        .info-button button {
-            background-color: #1b3b40;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        .btn-detail {
-            background-color: #1b3b40;
-            color: #fff;
-            padding: 5px 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .btn-edit {
-            background-color: yellow;
-            color: black;
-            padding: 5px 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .btn-delete {
-            background-color: red;
-            color: #fff;
-            padding: 5px 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
     </style>
     <div class="card">
         <div class="card-header">
@@ -86,76 +49,38 @@
             <div class="card-tools"></div>
         </div>
         <div class="card-body">
-            <div class="info-button">
-                <button>+Tambah Informasi</button>
-            </div>
-            <style>
-                /* Adjust the width of the "Number (No)" column */
-                th:first-child,
-                td:first-child {
-                    width: 10rem;   
-                }
-            </style>
             <table style="width: 100%;border-collapse: collapse;margin-top: 20px;border: 1px solid #bdc3c7;">
                 <tr>
                     <th style="text-align: center;">No</th>
-                    <th style="text-align: center;">JENIS BANSOS</th>
+                    <th style="text-align: center;">Jenis Bansos</th>
                     <th style="text-align: center;">Aksi</th>
+
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>Bantuan Pangan Non Tunai (BPNT)</td>
-                    <td><a href="{{ url('/informasik/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
-                        <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
-                        <a href="{{ url('/delete') }}" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
-                    </td>
+                    <td style="font-weight: bold">Bantuan Pangan Non Tunai (BPNT)</td>
+                    <td><a href="{{ url('/informasi/detail/1') }}" class="btn"><i class="fas fa-info-circle"></i>
+                            Detail</a></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Program Keluarga Harapan (PKH)</td>
-                    <td><a href="{{ url('/informasik/detail/2') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
-                        <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
-                        <a href="/delete_informasi_kelurahan" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
-                    </td>
+                    <td style="font-weight: bold">Program Keluarga Harapan (PKH)</td>
+                    <td><a href="{{ url('/informasi/detail/2') }}" class="btn"><i class="fas fa-info-circle"></i>
+                            Detail</a></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Bantuan Langsung Tunai</td>
-                    <td><a href="{{ url('/informasik/detail/3') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
-                        <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
-                        <a href="/delete_informasi_kelurahan" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
-                    </td>
+                    <td style="font-weight: bold">Bantuan Langsung Tunai</td>
+                    <td><a href="{{ url('/informasi/detail/3') }}" class="btn"><i class="fas fa-info-circle"></i>
+                            Detail</a></td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>Bantuan Sosial Beras</td>
-                    <td><a href="{{ url('/informasik/detail/4') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail </a>
-                        <a href="/edit_informasi_kelurahan" class="btn-edit"><i class="fas fa-pen"></i> Edit </a>
-                        <a href="/delete_informasi_kelurahan" class="btn-delete"><i class="fas fa-trash"></i> Delete </a>
-                    </td>
+                    <td style="font-weight: bold">Bantuan Sosial Beras</td>
+                    <td><a href="{{ url('/informasi/detail/4') }}" class="btn"><i class="fas fa-info-circle"></i>
+                            Detail</a></td>
                 </tr>
             </table>
         </div>
     </div>
-    <script>
-        $('.btn-delete').on('click', function() {
-                if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
-                    var id = $(this).data('id');
-                    $.ajax({
-                        url: '/penerimas/' + id,
-                        type: 'DELETE',
-                        data: {
-                            _token: '{{ csrf_token() }}'
-                        },
-                        success: function(response) {
-                            alert('Data berhasil dihapus');
-                            location.reload();
-                        },
-                        error: function(xhr) {
-                            console.log(xhr.responseText);
-                        }
-                    });
-                }
-            });
-        </script>
 @endsection

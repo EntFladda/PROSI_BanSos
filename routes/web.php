@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\BansosController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JenisBansosController;
 use App\Http\Controllers\KelurahanController;
@@ -120,3 +122,11 @@ Route::get('/datapengajuan', [PengajuanController::class, 'index']);
 Route::get('/datapengajuan/detail/{id}', [PengajuanController::class, 'datapengajuandetail'])->name('datapengajuan.detail');
 
 Route::get('/informasi/detail/{id}', [JenisBansosController::class, 'show']);
+
+// routes/web.php
+Route::post('/konfirmasi_bansos/{id}', 'BansosController@konfirmasi')->name('konfirmasi_bansos');
+Route::post('/konfirmasi_bansos/{id}', 'DataController@konfirmasiBansos');
+
+Route::get('/validasi', [RWController::class, 'showValidationForm'])->name('validasi');
+
+Route::post('/store-pengajuan', [PengajuanController::class, 'store'])->name('store.pengajuan');

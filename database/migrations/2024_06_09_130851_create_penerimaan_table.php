@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('penerimaan', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('id_laporan');
+            $table->foreign('id_laporan')->references('id_laporan')->on('laporan')->onDelete('cascade');
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
