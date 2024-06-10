@@ -140,6 +140,7 @@
                     </tr>
                 </thead>
                 <tbody>
+<<<<<<< HEAD
                     @foreach($datapengajuan as $pengajuan)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
@@ -157,6 +158,35 @@
                     </td>
                 </tr>
                 @endforeach
+=======
+                    <tr>
+                        <td>1</td>
+                        <td>Lisa</td>
+                        <td>0100100001001010</td>
+                        <td>BLT</td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                        </td>
+                
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Rose</td>
+                        <td>0100100001001010</td>
+                        <td>PKH</td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Jisoo</td>
+                        <td>0100100001001010</td>
+                        <td>BPNT</td>
+                        <td><a href="{{ url('/laporanpenerimaank/detail/1') }}" class="btn-detail"><i class="fas fa-info-circle"></i> Detail</a>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+>>>>>>> 77273027590c5618fc4ec8aeb21270dfd673dbe3
             </table>
             <div class="table-pagination">
                 <div class="pagination-info">Showing 1 to 1 of 1 entries</div>
