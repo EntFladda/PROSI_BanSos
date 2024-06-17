@@ -97,6 +97,25 @@
   text-decoration: none;
   margin-left: 0.5rem;
 }
+
+.table-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.table-controls > label,
+.table-controls > select,
+.table-controls > span {
+    margin-right: 10px; 
+}
+
+#search-input {
+    margin-left: auto; 
+}
+
+
+
 </style>
 <div class="card">
     <div class="card-header">
