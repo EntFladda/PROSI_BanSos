@@ -8,11 +8,14 @@
             margin-top: 20px;
         }
 
-        table, th, td {
+        table,
+        th,
+        td {
             border: 1px solid #bdc3c7;
         }
 
-        th, td {
+        th,
+        td {
             padding: 12px;
             text-align: left;
         }
@@ -146,6 +149,9 @@
                             <td><a href="#" class="btn-success">Disetujui</a></td>
                         </tr>
                     @empty
+                        <tr>
+                            <td colspan="6" style="text-align: center;">Tidak ada data pengajuan.</td>
+                        </tr>
                     @endforelse
                 </table>
             </div>
