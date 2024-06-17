@@ -96,7 +96,7 @@
                 <div class="info-button">
                     <input type="text" id="search-input" placeholder="Search...">
                 </div>
-                <h3 style="font-size:25px;font-weight:bold;text-align:center;">Pending Applications</h3>
+                <h3 style="font-size:25px;font-weight:bold;text-align:center;">Menunggu Persetujuan</h3>
                 <table>
                     <tr>
                         <th style="text-align: center;">No</th>
