@@ -77,9 +77,9 @@
   margin-right: 0.5rem;
 }
 
-#search-input {
+#tambah {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid #1b3b40;
   border-radius: 4px;
 }
 .table-pagination {
@@ -113,7 +113,7 @@
               <option value="100">100</option>
             </select>entries
           
-            <input type="text" id="search-input" placeholder="Search...">
+            <input type="text" id="tambah" placeholder="Tambah">
           </div>
           
         <table class="data-table">
