@@ -1,3 +1,0 @@
-@extends('rw.template')
-
-
