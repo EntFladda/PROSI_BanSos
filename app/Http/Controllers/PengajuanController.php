@@ -65,7 +65,11 @@ class PengajuanController extends Controller
 
         $activeMenu = 'datapengajuan';
         $datapengajuan = Data::with('jenisBansos')->get();
-        return view('rw.datapengajuan', ['breadcrumb' => $breadcrumb, 'activeMenu' => $activeMenu, 'datapengajuan' => $datapengajuan]);
+        return view('rw.datapengajuan', [
+            'breadcrumb' => $breadcrumb, 
+            'activeMenu' => $activeMenu, 
+            'datapengajuan' => $datapengajuan
+        ]);
     }
 
     public function datapengajuandetail($id)

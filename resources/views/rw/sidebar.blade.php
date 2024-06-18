@@ -31,15 +31,6 @@
                 </a>
             </li>
 
-            
-            <li class="nav-item" style="background-color: #1b3b40; border-radius:10px; margin:5px">
-                <a href="{{ url('/laporanpenerimaanrw') }}" class="nav-link ">
-                    <i class="nav-icon fas fa-book"></i>
-                    <p>LAPORAN PENERIMAAN</p>
-                </a>
-            </li>
-
-
         </ul>
     </nav>
 

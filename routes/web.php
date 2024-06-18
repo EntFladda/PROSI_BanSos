@@ -60,18 +60,15 @@ Route::post('/pengajuan-bantuan-sosial', [PengajuanController::class, 'store'])-
 
 // RT
 Route::get('/pengajuanrt', [RTController::class,'pengajuanrt']);
+Route::get('/datapengajuan', [RWController::class,'datapengajuan']);
 Route::get('/laporanpengajuan', [RTController::class,'laporanpengajuan']);
 Route::get('/laporanpengajuan/detail/{id}', [RTController::class,'laporanpengajuandetail']);
-Route::get('/laporanpenerimaan', [RTController::class,'laporanpenerimaan']);
-Route::get('/laporanpenerimaan/detail/{id}', [RTController::class,'laporanpenerimaandetail']);
 
 // RW
 Route::get('/datapengajuan', [RWController::class,'datapengajuan']);
 Route::get('/datapengajuan/detail/{id}', [RWController::class,'datapengajuandetail']);
 Route::get('/laporanpengajuanrw', [RWController::class,'laporanpengajuanrw']);
 Route::get('/laporanpengajuanrw/detail/{id}', [RWController::class,'laporanpengajuanrwdetail']);
-Route::get('/laporanpenerimaanrw', [RWController::class,'laporanpenerimaanrw']);
-Route::get('/laporanpenerimaanrw/detail/{id}', [RWController::class,'laporanpenerimaanrwdetail']);
 Route::get('/validasi', [RWController::class,'validasi']);
 Route::get('/validasi/detail/{id}', [RWController::class,'validasidetail']);
 Route::delete('/validasi/delete/{id}', [RWController::class,'delete']);
